@@ -20,11 +20,11 @@ Jan.AI is committed to an open-source ethos, with its core team championing the 
 
 ### Compatibility and User Experience
 
-Jan.AI is designed to be cross-platform, supporting a range of operating systems including Mac (Intel and Silicon), Windows, and Linux, as well as various hardware configurations. Users can easily switch between different AI chatbot language models, making it a versatile tool for personal projects, academic research, and professional tasks. (Source: [Geeky Gadgets](https://www.geeky-gadgets.com))
+Jan.AI is designed to be cross-platform, supporting a range of operating systems including Mac (Intel and Silicon), Windows, and Linux, as well as various hardware configurations. Users can easily switch between different AI chatbot language models, making it a versatile tool for personal projects, academic research, and professional tasks. (Source: [Geeky Gadgets](https://www.geeky-gadgets.com/ai-chatbots-locally/))
 
 ### Offline Capabilities
 
-A distinguishing feature of Jan.AI is its ability to operate offline. Certain models can function without an internet connection, adding an extra layer of privacy for sensitive or confidential projects. Additionally, Jan.AI is dynamic, regularly updating to integrate new open-source models and advancements in AI technology. (Source: [Geeky Gadgets](https://www.geeky-gadgets.com/ai-chatbots-locally/)))
+A distinguishing feature of Jan.AI is its ability to operate offline. Certain models can function without an internet connection, adding an extra layer of privacy for sensitive or confidential projects. Additionally, Jan.AI is dynamic, regularly updating to integrate new open-source models and advancements in AI technology. (Source: [Geeky Gadgets](https://www.geeky-gadgets.com/ai-chatbots-locally/))
 
 ### Future Developments and Project Ideas
 
