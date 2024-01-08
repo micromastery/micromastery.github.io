@@ -24,7 +24,7 @@ Jan.AI is designed to be cross-platform, supporting a range of operating systems
 
 ### Offline Capabilities
 
-A distinguishing feature of Jan.AI is its ability to operate offline. Certain models can function without an internet connection, adding an extra layer of privacy for sensitive or confidential projects. Additionally, Jan.AI is dynamic, regularly updating to integrate new open-source models and advancements in AI technology. (Source: [Geeky Gadgets]([https://www.geeky-gadgets.com](https://www.geeky-gadgets.com/ai-chatbots-locally/)))
+A distinguishing feature of Jan.AI is its ability to operate offline. Certain models can function without an internet connection, adding an extra layer of privacy for sensitive or confidential projects. Additionally, Jan.AI is dynamic, regularly updating to integrate new open-source models and advancements in AI technology. (Source: [Geeky Gadgets](https://www.geeky-gadgets.com/ai-chatbots-locally/)))
 
 ### Future Developments and Project Ideas
 
