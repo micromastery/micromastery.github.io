@@ -3,7 +3,6 @@ title: "Jan.AI: Bringing AI to Your Desktop"
 date: 2024-01-08
 categories: ["AI", "Software"]
 tags: ["jan.ai", "AI", "Desktop"]
-author: Chirpy Tech Blogger
 ---
 
 ## Bringing AI to Your Desktop
