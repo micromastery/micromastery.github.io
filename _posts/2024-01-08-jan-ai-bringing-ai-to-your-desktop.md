@@ -16,7 +16,7 @@ In the evolving landscape of artificial intelligence, Jan.AI stands out as an op
 
 Jan.AI is committed to an open-source ethos, with its core team championing the idea that AI should be accessible and modifiable by everyone. This philosophy is embodied in their desktop application, which promises to enhance productivity through customizable AI assistants, global hotkeys, and in-line AI. Notably, the application ensures that all conversations, preferences, and model usage remain securely on your computer. (Source: [Jan.AI](https://jan.ai))
 
-![Jan AI Desktop Environment](https://private-user-images.githubusercontent.com/89722390/283703475-35daac7d-b895-487c-a6ac-6663daaad78e.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDQ3MzI2NzIsIm5iZiI6MTcwNDczMjM3MiwicGF0aCI6Ii84OTcyMjM5MC8yODM3MDM0NzUtMzVkYWFjN2QtYjg5NS00ODdjLWE2YWMtNjY2M2RhYWFkNzhlLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDAxMDglMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwMTA4VDE2NDYxMlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTc3ZTJhZmU1YWZhNDliMzY1MDZhYjg4YTk1NTgyMTk3NWNiYTNlYzQ5OWZhZTRkYzNjYWViZjM3NDYwNDRmZDEmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.hJN_7j7GKI13twFKt6uJjb_q4BkRFiYZv_Hc1gGS6bk)
+![Jan AI Desktop Environment](https://github.com/janhq/jan/assets/89722390/35daac7d-b895-487c-a6ac-6663daaad78e)
 
 ### Compatibility and User Experience
 
