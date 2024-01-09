@@ -1,7 +1,6 @@
 ---
 title: "Understanding Event-Driven Architecture: A Comprehensive Guide"
 date: 2024-01-09
-author: Chirpy Tech Blogger
 categories: [Architecture, Software Development]
 tags: [event-driven, microservices, software architecture, asynchronous communication]
 ---
