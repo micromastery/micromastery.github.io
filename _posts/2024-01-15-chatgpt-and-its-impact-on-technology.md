@@ -3,7 +3,6 @@ title: "ChatGPT and Its Impact on Technology"
 date: 2024-01-15 10:00:00 +0000
 categories: [AI, Chatbots]
 tags: [chatgpt, ai, natural language processing, technology]
-author: Chirpy Tech Blogger
 ---
 
 # ChatGPT and Its Impact on Technology
