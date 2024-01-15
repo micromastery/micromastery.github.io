@@ -1,6 +1,6 @@
 ---
 title: Automating Blog Creation with Custom GPT Actions and Python Backend
-date: 2024-01-15 10:00:00 +0000
+date: 2024-01-15 00:00:00 +0000
 categories: [Blogging, Automation]
 tags: [python, flask, github, oauth, gpt, jekyll, automation]
 ---
