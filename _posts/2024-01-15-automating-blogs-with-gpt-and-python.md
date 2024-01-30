@@ -1,5 +1,5 @@
 ---
-title: Automating Blog Creation with Custom GPT Actions and Python Backend
+title: Level up your Custom GPTs with GPT Actions
 date: 2024-01-15 00:00:00 +0000
 categories: [Blogging, Automation]
 tags: [python, flask, github, oauth, gpt, jekyll, automation]
@@ -7,7 +7,7 @@ tags: [python, flask, github, oauth, gpt, jekyll, automation]
 
 ## Introduction
 
-In today's fast-paced digital world, automation is key to efficiency. This blog post will guide you through setting up an automated system for blog creation using custom GPT actions and a Python backend. This setup allows for seamless integration with a GitHub repository using a Jekyll theme.
+In today's fast-paced digital world, automation is key to efficiency. This blog post will guide you through setting up GPT actions with your own endpoint using python. As an example we will consider "Automating Blog Creation with Custom GPT Actions, Python Backend and Github pages". This setup allows for seamless integration with a GitHub repository using a Jekyll theme.
 
 ## Prerequisites
 
