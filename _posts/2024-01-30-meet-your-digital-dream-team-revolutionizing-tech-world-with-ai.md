@@ -64,7 +64,7 @@ Agents can utilize various language models, with GPT-4 as the default. For examp
 # llm=OpenAI(model_name="gpt-3.5-turbo-instruct", temperature=0.7)
 ```
 
-You can also integrate multiple tools like search, Wolfram Alpha, YouTube, Google Drive, and more, available in langchain. Here's the exciting part: You're not limited to just these tools. Crew AI enables you to code your own custom tools which is not in the scope of this blog post.
+You can also integrate multiple tools like search, Wolfram Alpha, YouTube, Google Drive, and more, available in langchain. Here's the exciting part: You're not limited to just these tools. Crew AI enables you to code your own custom tools, to learn how to do so, check out the tutorial [here](https://micromastery.github.io/posts/customizing-llms-with-langchain-text-to-speech/).
 
 
 Remember to set your OpenAI API key if using OpenAI models.
