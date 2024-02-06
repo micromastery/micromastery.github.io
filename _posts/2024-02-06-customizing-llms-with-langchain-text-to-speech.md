@@ -17,6 +17,8 @@ Note: The same concept can be used for customizing Crew AI agents discussed in t
 
 Before diving into the code, ensure you have Langchain and the necessary libraries installed. This example uses `langchain`, `langchain-openai`, and `gtts` for Google Text-to-Speech conversion. Install them using `pip` if you haven't done so already.
 
+Full code can be found [here](https://github.com/micromastery/LangChainTutorial-CustomTool).
+
 ## Defining a Custom Capability
 
 To start, we define a custom capability for converting text to speech as an example. This is achieved by creating a class that inherits from `BaseModel` and uses the `@tool` decorator to register the function as a Langchain tool. 
