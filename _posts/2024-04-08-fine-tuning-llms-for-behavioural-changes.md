@@ -9,8 +9,6 @@ tags: [AI, LLM, Fine-Tuning, Tutorial]
 
 Fine tuning is one of the most popular techniques to tailor LLMs for specific usecases or needs. This method allows you to mold the LLM’s responses to fit a certain style or behaviour, making it possible for the model to emulate specific communication patterns. This can be particularly useful for personalizing interactions or creating a unique brand voice. For example, you can fine tune the LLM to respond to your chats in your own style. In this post, we will go through a demonstration of how finetuning can be used to tweak the responses of LLMs.
 
-
-
 # Fine Tuning Demonstration
 
 In this tutorial we will see an example of how to tune your LLM to behave in certain way using [langchain](https://python.langchain.com/docs/get_started/introduction) and [hugging face transformers](https://huggingface.co/docs/transformers/en/index). 
@@ -225,7 +223,7 @@ print(tokenizer.decode(outputs[0], skip_special_tokens=True))
 It can be observed that the behaviour of the LLM has changed even with the little training that has been done. The hyper-parameters can be adjusted further based on the requirement.
 
 > **Note**: I haven't tried to optimize the hyperparameters and finetuned the LLM with random values just to demonstrate the behaviour change using finetuning technique. However, the output can be made better by optimizing the hyperparameters further. 
-{: .prompt-info }
+{: .prompt-warning }
 
 ### Loading the saved model
 
