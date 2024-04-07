@@ -7,8 +7,8 @@ tags: [AI, LLM, Fine-Tuning, Tutorial]
 
 # Fine Tuning LLMs for behavioural changes
 
-Fine tuning is one of the most popular techniques to tailor LLMs for specific usecases or needs. This method allows you to mold the LLM’s responses to fit a certain style or behaviour, making it possible for the model to emulate specific communication patterns. This can be particularly useful for personalizing interactions or creating a unique brand voice. For example, you can fine tune the LLM to respond to your chats in your own style. In this post, we will go through a demonstration of how finetuning can be used to tweak the responses of LLMs.e
-<!-- Fine tuning targets tuining the LLMs to behave in certain way, if you are looking for providing it access to a knowledge base then fine tuning may not work for you, if that's your use case refer to this article to know which technique to use for which use case: [FineTuning vs Knowledge Base Embedding](2024-03-12-tailoring-language-models-for-specific-tasks.md.md). -->
+Fine tuning is one of the most popular techniques to tailor LLMs for specific usecases or needs. This method allows you to mold the LLM’s responses to fit a certain style or behaviour, making it possible for the model to emulate specific communication patterns. This can be particularly useful for personalizing interactions or creating a unique brand voice. For example, you can fine tune the LLM to respond to your chats in your own style. In this post, we will go through a demonstration of how finetuning can be used to tweak the responses of LLMs.
+
 
 
 # Fine Tuning Demonstration
