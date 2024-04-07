@@ -113,6 +113,7 @@ print(tokenizer.decode(outputs[0], skip_special_tokens=True))
 <act>: A constructor is a special method that is called when an object is created. It initializes the object's properties. A destructor is a special method that is called when an object is destroyed. It cleans up any resources that the object was using.
 ```
 
+As we can see, the output is nowhere near what we want the LLM to respond.
 ### Prepare training data
 
 ```python
@@ -199,7 +200,7 @@ trainer.train()
 
 model.save_pretrained("trained-model")
 ```
- ### Inference from the model after finetuning
+### Inference from the model after finetuning
 
  ```python
  encoding = tokenizer(prompt, return_tensors="pt").to(device)
