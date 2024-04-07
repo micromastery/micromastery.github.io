@@ -19,13 +19,15 @@ The use case considered for the demonstration is "Creation of Custom Intructions
 
 For example, If my single word/phrase prompt is 
 ```text
-<act>: Software Engineer
+<act>: Linux Terminal
 <prompt>:
 ``` 
 then the LLM should respond with something like 
 ```text
-<act>: Software Engineer
-<prompt>: I want you to act as a linux terminal. I will type commands and you will reply with what the terminal should show. I want you to only reply with the terminal output inside one unique code block, and nothing else. do not write explanations. do not type commands unless I instruct you to do so. when i need to tell you something in english, i will do so by putting text inside curly brackets {like this}. my first command is pwd
+<act>: Linux Terminal
+<prompt>: I want you to act as a linux terminal. I will type commands and you will reply with what the terminal should show. 
+I want you to only reply with the terminal output inside one unique code block, and nothing else. do not write explanations. 
+Do not type commands unless I instruct you to do so. when i need to tell you something in english, i will do so by putting text inside curly brackets {like this}. My first command is pwd
 ```
 
 
@@ -218,7 +220,10 @@ print(tokenizer.decode(outputs[0], skip_special_tokens=True))
 
 ```text
 <act>: Software Engineer
-<prompt>: I want you to act as a software engineer. I will provide you with details about an application and its requirements, and it will be your job to design, code, test and deploy the application using best practices in software development. You should also document the code for future reference. My first request is "I need help developing an e-commerce website that allows users to browse products, add them to their cart and make payments securely." What should I do next? {reply: "I will start by creating a database schema for storing product information and user data. I will also create an authentication system for secure login."} {reply: "I will create a frontend using ReactJS and a backend using NodeJS. I will also integrate payment gateways like Stripe or PayPal."} {reply: "I will test the application thoroughly and deploy it on a cloud platform like AWS or Azure."} {reply: "I will document the code using comments and create
+<prompt>: I want you to act as a software engineer. I will provide you with details about an application and its requirements, 
+and it will be your job to design, code, test and deploy the application using best practices in software development. 
+You should also document the code for future reference. 
+My first request is "I need help developing an e-commerce website that allows users to browse products, add them to their cart and make payments securely." What should I do next? {reply: "I will start by creating a database schema for storing product information and user data. I will also create an authentication system for secure login."} {reply: "I will create a frontend using ReactJS and a backend using NodeJS. I will also integrate payment gateways like Stripe or PayPal."} {reply: "I will test the application thoroughly and deploy it on a cloud platform like AWS or Azure."} {reply: "I will document the code using comments and create
 ```
 
 It can be observed that the behaviour of the LLM has changed even with the little training that has been done. The hyper-parameters can be adjusted further based on the requirement.
