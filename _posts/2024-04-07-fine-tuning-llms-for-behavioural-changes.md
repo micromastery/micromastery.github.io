@@ -234,7 +234,7 @@ It can be observed that the behaviour of the LLM has changed even with the littl
 ### Loading the saved model
 
 ```python
-BASE_MODEL_NAME = "mlabonne/UltraMerge-7B"
+BASE_MODEL_NAME = "mistralai/Mistral-7B-v0.1"
 ADAPTER_MODEL_NAME = 'trained-model'
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
