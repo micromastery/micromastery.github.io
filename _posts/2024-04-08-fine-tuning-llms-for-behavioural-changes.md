@@ -1,6 +1,6 @@
 ---
 title: "Fine Tuning LLMs for behavioural changes"
-date: 2024-03-12 00:00:00 +0000
+date: 2024-04-08 00:00:00 +0000
 categories: [AI, Development, LLM]
 tags: [AI, LLM, Fine-Tuning, Tutorial]
 ---
