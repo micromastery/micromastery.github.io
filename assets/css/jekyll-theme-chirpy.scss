@@ -1,0 +1,82 @@
+---
+---
+
+@import 'main';
+
+/* append your custom style below */
+
+/* Newsletter Modal */
+#newsletterModal .modal-content {
+    background-color: var(--main-bg); /* Adjust variable name as per Chirpy theme */
+    color: var(--text-color); /* Adjust variable name as per Chirpy theme */
+  }
+  
+  #newsletterModal label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-color); /* Adjust variable name as per Chirpy theme */
+  }
+  
+  #newsletterModal input[type="text"],
+  #newsletterModal input[type="email"] {
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    margin-bottom: 1rem;
+    background-color: var(--main-bg); /* Adjust variable name as per Chirpy theme */
+    border: 1px solid var(--text-color); /* Adjust variable name as per Chirpy theme */
+    border-radius: 0.25rem;
+    color: var(--text-color); /* Adjust variable name as per Chirpy theme */
+  }
+  
+  #newsletterModal .btn {
+    background-color: var(--button-bg); /* Adjust variable name as per Chirpy theme */
+    border-color: var(--btn-border-color); /* Adjust variable name as per Chirpy theme */
+    color: var(--btn-text-color); /* Adjust variable name as per Chirpy theme */
+  }
+
+  
+  #newsletterModal .btn:hover {
+    background-color: var(--btn-hover-bg-color); /* Adjust variable name as per Chirpy theme */
+    border-color: var(--btn-share-hover-color); /* Adjust variable name as per Chirpy theme */
+  }
+
+  .close-button{
+    border: none; 
+    font-size: xx-large;   
+  }
+
+  /* Newsletter Button Styles */
+.btn-newsletter {
+  background-color: var(--primary-color); /* Primary color for the button */
+  color: var(--light-text-color); /* Text color that contrasts with the button's background */
+  border: none;
+  padding: 0.5rem 1rem; /* Adequate padding for a button */
+  border-radius: 0.375rem; /* Slightly rounded corners, aligning with Chirpy's style */
+  font-weight: bold; /* Makes the text slightly bolder */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.btn-newsletter:hover, .btn-newsletter:focus {
+  background-color: var(--primary-dark-color); /* Slightly darker shade on hover/focus */
+  color: var(--light-text-color);
+  text-decoration: none; /* Prevents underlining text on hover/focus */
+}
+
+/* Adjusting for dark mode, if Chirpy has a mechanism or class for it */
+[data-theme="dark"] .btn-newsletter {
+  background-color: var(--dark-primary-color); /* Primary color for dark mode */
+  color: var(--dark-light-text-color); /* Text color for dark mode */
+}
+
+[data-theme="dark"] .btn-newsletter:hover, [data-theme="dark"] .btn-newsletter:focus {
+  background-color: var(--dark-primary-dark-color); /* Darker shade for hover/focus in dark mode */
+}
+
+.green-tick-icon{
+  color:green;  
+}
+
+#checkmark{
+  display: none;
+}
+  
