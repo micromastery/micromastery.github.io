@@ -22,7 +22,7 @@
     {% endif %}
   </p>
   <button type="button" class="btn btn-newsletter" data-bs-toggle="modal" data-bs-target="#newsletterModal">
-    Newsletter   <i id="checkmark" class="fas fa-check green-tick-icon" ></i>
+    Newsletter <i id="checkmark" class="fas fa-check green-tick-icon"></i>
   </button>
   <p>
     {%- capture _platform -%}
@@ -36,16 +36,15 @@
 
     {{ site.data.locales[include.lang].meta | replace: ':PLATFORM', _platform | replace: ':THEME', _theme }}
   </p>
-  
-  
+
+
 </footer>
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('newsletterForm');
     const formSubmittedKey = 'formSubmitted';
-    form.addEventListener('submit', function() {
-      // Store the submission timestamp in localStorage
+    form.addEventListener('submit', function () {
       const submissionTimestamp = new Date().getTime();
       localStorage.setItem(formSubmittedKey, JSON.stringify({ timestamp: submissionTimestamp }));
       document.getElementById('checkmark').style.display = 'inline-block';
@@ -55,24 +54,24 @@
 
 
     const modalShownKey = 'modalShown';
-    const expiryDuration = 7 * 24 * 60 * 60 * 1000; // 7 days in milliseconds
+    const expiryDuration = 7 * 24 * 60 * 60 * 1000;
 
     const modalShownData = localStorage.getItem(modalShownKey);
     const formSubmittedData = localStorage.getItem(formSubmittedKey);
-    
-    if(formSubmittedData){
+
+    if (formSubmittedData) {
       document.getElementById('checkmark').style.display = 'inline-block';
     }
 
     const now = new Date().getTime();
-    
+
     let isExpired = false;
-    
+
     if (modalShownData) {
       const { timestamp } = JSON.parse(modalShownData);
       isExpired = now - timestamp > expiryDuration;
     }
-    
+
     if (!formSubmittedData && (!modalShownData || isExpired)) {
       var myModal = new bootstrap.Modal(document.getElementById('newsletterModal'));
       myModal.show();
@@ -88,7 +87,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="newsletterModalLabel">Subscribe to Our Newsletter</h5>
-        <button type="button" class="btn close-button"  data-bs-dismiss="modal" >&times;</button>
+        <button type="button" class="btn close-button" data-bs-dismiss="modal">&times;</button>
       </div>
       <div class="modal-body">
         <!-- Embed Google Form -->
