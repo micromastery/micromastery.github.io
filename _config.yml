@@ -39,7 +39,7 @@ google_analytics:
 theme_mode: 
 
 # Avatar URL
-avatar: https://th.bing.com/th/id/OIG.VeZGPBuwTlCNS7NIZubl?pid=ImgGn
+avatar: /assets/img/favicons/android-chrome-512x512.png
 
 # Comments System: Utterances
 comments:
