@@ -10,12 +10,12 @@ lang: en
 timezone: 
 
 # jekyll-seo-tag settings
-title: Micro Mastery
+title: Sankar's Blog
 tagline: Simplifying Mastery, One Topic at a Time
-description: Micro Mastery offers a unique approach to learning and mastering new skills in bite-sized chunks. Perfect for the curious minds and lifelong learners.
+description: A blog about learning and mastering new topics in a simple and easy way.
 
 # Site URL
-url: "https://micromastery.github.io"
+url: "https://blog.mavsankar.com"
 
 github:
   username: mavsankar
@@ -24,9 +24,9 @@ twitter:
 
 # Personal Information
 social:
-  name: Micro Mastery
+  name: mavsankar
   links:
-    - https://github.com/micromastery
+    - https://github.com/mavsankar
 
 # Google Site Verification
 google_site_verification: 
