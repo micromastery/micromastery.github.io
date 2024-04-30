@@ -21,9 +21,6 @@
     </span>
     {% endif %}
   </p>
-  <button type="button" class="btn btn-newsletter" data-bs-toggle="modal" data-bs-target="#newsletterModal">
-    Newsletter <i id="checkmark" class="fas fa-check green-tick-icon"></i>
-  </button>
   <p>
     {%- capture _platform -%}
     <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a>
@@ -36,77 +33,8 @@
 
     {{ site.data.locales[include.lang].meta | replace: ':PLATFORM', _platform | replace: ':THEME', _theme }}
   </p>
-
+  <a href="https://micromastery.github.io/privacy-policy.md">Privacy Policy</a>
 
 </footer>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('newsletterForm');
-    const formSubmittedKey = 'formSubmitted';
-    form.addEventListener('submit', function () {
-      const submissionTimestamp = new Date().getTime();
-      localStorage.setItem(formSubmittedKey, JSON.stringify({ timestamp: submissionTimestamp }));
-      document.getElementById('checkmark').style.display = 'inline-block';
-      var myModal = bootstrap.Modal.getInstance(document.getElementById('newsletterModal'));
-      myModal.hide();
-    });
-
-
-    const modalShownKey = 'modalShown';
-    const expiryDuration = 7 * 24 * 60 * 60 * 1000;
-
-    const modalShownData = localStorage.getItem(modalShownKey);
-    const formSubmittedData = localStorage.getItem(formSubmittedKey);
-
-    if (formSubmittedData) {
-      document.getElementById('checkmark').style.display = 'inline-block';
-    }
-
-    const now = new Date().getTime();
-
-    let isExpired = false;
-
-    if (modalShownData) {
-      const { timestamp } = JSON.parse(modalShownData);
-      isExpired = now - timestamp > expiryDuration;
-    }
-
-    if (!formSubmittedData && (!modalShownData || isExpired)) {
-      var myModal = new bootstrap.Modal(document.getElementById('newsletterModal'));
-      myModal.show();
-      localStorage.setItem(modalShownKey, JSON.stringify({ timestamp: now }));
-    }
-  });
-</script>
-
-
-<!-- Newsletter Modal -->
-<div class="modal fade" id="newsletterModal" tabindex="-1" aria-labelledby="newsletterModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="newsletterModalLabel">Subscribe to Our Newsletter</h5>
-        <button type="button" class="btn close-button" data-bs-dismiss="modal">&times;</button>
-      </div>
-      <div class="modal-body">
-        <!-- Embed Google Form -->
-        <form id="newsletterForm"
-          action="  https://docs.google.com/forms/u/3/d/e/1FAIpQLSchUZrE0a1eLLLtzKNZX93ZH4wJMWWYt_ULTVh_3vjCNofFjA/formResponse"
-          method="POST" target="_blank">
-          <div>
-            <label for="name">Name:</label>
-            <input type="text" name="entry.2005620554" id="name" required>
-          </div>
-          <div>
-            <label for="email">Email:</label>
-            <input type="email" name="entry.1045781291" id="email" required>
-          </div>
-          <div>
-            <button class="btn" type="submit">Submit</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
+<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/b4669f43a426fe4117b365f04/96dd73ef2affbd74b2ca69207.js");</script>
