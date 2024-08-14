@@ -22,7 +22,7 @@ For demonstration purposes, let us consider two agents, one researcher(Scout), w
 #### Prerequisites:
 
 - Python 
-- Basic Knowledge about LangChain ( If not, Get started [here](dshttps://python.langchain.com/docs/expression_language/get_starteda))
+- Basic Knowledge about LangChain ( If not, Get started [here](https://python.langchain.com/docs/expression_language/get_started))
 
 #### Installation:
 
