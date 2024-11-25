@@ -1,7 +1,7 @@
 ---
 title: "Unlocking the Power of Structured Outputs in OpenAI and Azure OpenAI"
 date: 2024-11-25 00:00:00 +0000
-[AI, Azure, OpenAI, Development]
+categories: [AI, Azure, OpenAI, Development]
 tags: [AI, Azure, OpenAI, Development, Structured Outputs, JSON, Constrained Decoding, Data Summarization, Chatbots, Web Scraping, Security, Pydantic, Zod, Tutorial]
 ---
 # Unlocking the Power of Structured Outputs in OpenAI and Azure OpenAI
