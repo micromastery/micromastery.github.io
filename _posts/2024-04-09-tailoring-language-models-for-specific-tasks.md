@@ -5,7 +5,7 @@ categories: [AI, Development, LLM]
 tags: [AI, LLM, Fine-Tuning, RAG, Tutorial]
 ---
 
-# Tailoring Language Models for Specific Tasks
+## Tailoring Language Models for Specific Tasks
 
 LLMs are renowned for their ability to understand and generate text that closely mirrors human conversation, making them great for activities such as content creation, language translation, and sentiment analysis.
 

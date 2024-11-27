@@ -5,7 +5,7 @@ categories: [AI, Development, LLM]
 tags: [AI, LLM, RAG, Tutorial]
 ---
 
-# Why Knowledge Base Embedding
+## Why Knowledge Base Embedding
 
 Suppose you have a very capable and powerful LLM, however, to use it you want it to have access to some domain knowledge. Say, you are working with some confidential data in your company and/or the knowledge base for your LLM keeps on changing. This is where knowledge base embedding comes into the picture.
 
@@ -14,7 +14,7 @@ In knowledge base embedding, when the user asks a question, we search for the re
 ![rag](../assets/RAG/Rag.png)
 
 
-# How to do RAG?
+## How to do RAG?
 
 As mentioned above, RAG has two steps, search relevant information and augmenting it with the input for accurate results.
 

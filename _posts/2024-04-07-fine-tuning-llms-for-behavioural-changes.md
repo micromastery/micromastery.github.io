@@ -5,7 +5,7 @@ categories: [AI, Development, LLM]
 tags: [AI, LLM, Fine-Tuning, Tutorial]
 ---
 
-# Fine Tuning LLMs for behavioural changes
+## Fine Tuning LLMs for behavioural changes
 
 Fine tuning is one of the most popular techniques to tailor LLMs for specific usecases or needs. This method allows you to mold the LLM’s responses to fit a certain style or behaviour, making it possible for the model to emulate specific communication patterns. This can be particularly useful for personalizing interactions or creating a unique brand voice. For example, you can fine tune the LLM to respond to your chats in your own style. In this post, we will go through a demonstration of how finetuning can be used to tweak the responses of LLMs.
 
@@ -13,7 +13,7 @@ The below diagram explains how finetuning is done
 
 ![Fine tuning](../assets/FineTuning/Fine%20tuning.png)
 
-# Fine Tuning Demonstration
+## Fine Tuning Demonstration
 
 In this tutorial we will see an example of how to tune your LLM to behave in certain way using [langchain](https://python.langchain.com/docs/get_started/introduction) and [hugging face transformers](https://huggingface.co/docs/transformers/en/index). 
 
@@ -37,7 +37,7 @@ Do not type commands unless I instruct you to do so. when i need to tell you som
 
 In the following sections, let's go through how to tune the LLM for this use case.
 
-# Tutorial for Finetuning
+## Tutorial for Finetuning
 
 ## Install required packages
 ```python
