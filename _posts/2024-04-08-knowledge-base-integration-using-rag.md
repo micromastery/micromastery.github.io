@@ -61,7 +61,7 @@ This dataset has multiple fields in it but for the demonstration, I am interesti
 > The dataset also contains a column for "Resolution" of the closed ticket which we could use to make the system provide potential resolutions for the ticket. However, at the time of writing this article, the data in the "Resolution" column is gibberish and not usable but if that data is also available, the same use case can be further extended.
 {: .prompt-danger}
 
-Now that we have the required pre-requisites for the problem statement, we  can proceed with the code in python.
+Now that we have the required pre-requisites for the problem statement, we can proceed with the code in Python.
 
 ### Install Required Packages
 

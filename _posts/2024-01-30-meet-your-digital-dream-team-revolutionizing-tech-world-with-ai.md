@@ -15,7 +15,7 @@ Crew AI is a framework enabling you to build a team of cooperative AI agents, ea
 
 ### Getting Started with Crew AI
 
-For demonstration purposes, let us consider two agents, one researcher(Scout), who searches the internet for latest advancements in tech and another content writer (Scribe), who geneates a 10 minute youtube video script based on the research done by the Scout.
+For demonstration purposes, let us consider two agents, one researcher(Scout), who searches the internet for latest advancements in tech and another content writer (Scribe), who generates a 10 minute YouTube video script based on the research done by the Scout.
 
 ![Crew-AI-Tutorial](https://raw.githubusercontent.com/micromastery/micromastery.github.io/main/assets/CrewAI-Tutorial-1/Crew-AI-Tutorial-1.png)
 <sub><sup>*simplified diagram</sup></sub>

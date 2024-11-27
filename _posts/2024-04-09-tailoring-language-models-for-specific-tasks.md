@@ -21,7 +21,7 @@ By leveraging the capabilities of these advanced language models, you can boost 
 
 This method allows you to mold the LLM’s responses to fit a certain style or behaviour, making it possible for the model to emulate specific communication patterns. This can be particularly useful for personalizing interactions or creating a unique brand voice. For example, you can fine tune the LLM to respond to your chats in your own style.
 
-![Fine tuning](../assets/FineTuning/Fine%20tuning.png)
+![Fine-Tuning](../assets/FineTuning/Fine%20tuning.png)
 
 ### Knowledge Base Integration
 
@@ -33,6 +33,6 @@ This approach involves equipping the LLM with a wealth of domain-specific inform
 
 Now that you are familiar with the most popular strategies for adapting LLMs to fit specific needs, check out the following posts for practical, step-by-step tutorials:
 
-### [Getting Started with Fine-Tuning](https://micromastery.github.io/posts/fine-tuning-llms-for-behavioural-changes/)
+### [Getting Started with Fine-Tuning](https://micromastery.github.io/posts/fine-tuning-llms-for-behavioral-changes/)
 
 ### [Integrating Knowledge Bases with LLMs](https://micromastery.github.io/posts/knowledge-base-integration-using-rag/)
