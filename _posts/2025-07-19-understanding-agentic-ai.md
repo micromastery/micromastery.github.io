@@ -55,11 +55,6 @@ graph TD
     D --> M[External Services]
     D --> N[Functions]
     D --> O[Data Sources]
-    
-    style A fill:#e1f5fe
-    style B fill:#f3e5f5
-    style C fill:#e8f5e8
-    style D fill:#fff3e0
 ```
 
 ## Principles for Building Good AI Agents
@@ -110,11 +105,6 @@ flowchart TD
         RT --> API[External APIs]
         RT --> KB[Knowledge Base]
     end
-    
-    style Q fill:#e3f2fd
-    style AR fill:#f3e5f5
-    style V fill:#fff3e0
-    style M fill:#e8f5e8
 ```
 
 ### Planning Design Pattern
@@ -158,9 +148,6 @@ graph LR
         C3 --> AG
         AG --> R2[Refined Result]
     end
-    
-    style GM fill:#ff9800
-    style AG fill:#4caf50
 ```
 
 ### Metacognition Design Pattern
@@ -218,15 +205,6 @@ graph TD
         BF -.-> E6
         EH -.-> E6
     end
-    
-    style UR fill:#e3f2fd
-    style UF fill:#e8f5e8
-    style E1 fill:#fff3e0
-    style E2 fill:#fff3e0
-    style E3 fill:#fff3e0
-    style E4 fill:#fff3e0
-    style E5 fill:#fff3e0
-    style E6 fill:#fff3e0
 ```
 
 ## Agentic Frameworks and Model Context Protocol
@@ -277,14 +255,6 @@ graph TB
     
     P --> P1[Dynamic Input]
     P --> P2[Consistent Messaging]
-    
-    style H fill:#e3f2fd
-    style C fill:#f3e5f5
-    style S fill:#e8f5e8
-    style T fill:#fff3e0
-    style R fill:#fce4ec
-    style P fill:#f1f8e9
-    style SA fill:#e0f2f1
 ```
 
 MCP servers expose:
