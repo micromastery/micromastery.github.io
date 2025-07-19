@@ -3,6 +3,7 @@ title: "Understanding AI Agents: From Concept to Production"
 date: 2025-07-19 00:00:00 +0000
 categories: [AI, Development, Innovation]
 tags: [AI, AI-tools, automation, LLM, agentic, multi-agent, mcp]
+mermaid: true
 ---
 # My Notes on Agentic AI - Fundamentals
 
