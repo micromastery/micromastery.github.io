@@ -5,7 +5,7 @@ categories: [AI, Development, Langchain]
 tags: [AI, Langchain, Custom Capabilities, Text-to-Speech, Python, Tutorial]
 ---
 
-# Enhancing Large Language Models with Custom Capabilities Using Langchain
+## Enhancing Large Language Models with Custom Capabilities Using Langchain
 
 In the rapidly evolving landscape of AI and machine learning, the ability to extend and customize large language models (LLMs) has become increasingly important. Langchain, a powerful framework for building applications on top of LLMs, offers a streamlined approach for integrating custom capabilities. This blog post will guide you through a practical example of how to use Langchain to create a custom capability—specifically, converting text to speech—and how to integrate it with an OpenAI model.
 

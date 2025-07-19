@@ -10,10 +10,9 @@ lang: en
 timezone: 
 
 # jekyll-seo-tag settings
-title: Sankar's Blog
+title: Sankar's Blog- Software Development, AI, and Technology
 tagline: Simplifying Mastery, One Topic at a Time
-description: A blog about learning and mastering new topics in a simple and easy way.
-
+description: A blog by a software engineer exploring technology, software development, AI, and practical knowledge from real-world experiences..
 # Site URL
 url: "https://blog.mavsankar.com"
 
