@@ -23,7 +23,7 @@ In this blog post, we'll dive deep into:
 
 Whether you're a developer looking to build intelligent systems, a product manager exploring AI capabilities, or simply curious about the future of AI agents, this post will provide valuable insights into this exciting field.
 
-If you wish to listen to this as a small podcast (also AI generated), check this out: 
+If you wish to listen to this as a small podcast (**<span style="color: #ff6b6b; font-weight: bold;">also AI generated</span>**), check this out:
 
 <audio controls>
   <source type="audio/mp3" src="https://github.com/micromastery/micromastery.github.io/raw/refs/heads/main/assets/Understanding_AI_Agents/MCP.wav"></source>
