@@ -30,6 +30,9 @@ If you wish to listen to this as a small podcast (**<span style="color: #ff6b6b;
   <p>Your browser does not support the audio element.</p>
 </audio>
 
+ <!-- Funny gif showing agents at work -->
+![AI Agents at Work](https://github.com/micromastery/micromastery.github.io/blob/main/assets/Understanding_AI_Agents/podcast.gif?raw=true)
+
 ## What Are AI Agents?
 
 At their core, **AI agents** are sophisticated systems designed to understand user requests, create plans to fulfill those tasks, and execute actions to complete them. They represent a significant evolution from simple AI models to intelligent entities capable of autonomous decision-making and task execution.
