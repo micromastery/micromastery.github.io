@@ -23,6 +23,13 @@ In this blog post, we'll dive deep into:
 
 Whether you're a developer looking to build intelligent systems, a product manager exploring AI capabilities, or simply curious about the future of AI agents, this post will provide valuable insights into this exciting field.
 
+If you wish to listen to this as a small podcast (also AI generated), check this out: 
+
+<audio controls>
+  <source type="audio/mp3" src="../assets//Understanding_AI_Agents/MCP.wav"></source>
+  <p>Your browser does not support the audio element.</p>
+</audio>
+
 ## What Are AI Agents?
 
 At their core, **AI agents** are sophisticated systems designed to understand user requests, create plans to fulfill those tasks, and execute actions to complete them. They represent a significant evolution from simple AI models to intelligent entities capable of autonomous decision-making and task execution.
