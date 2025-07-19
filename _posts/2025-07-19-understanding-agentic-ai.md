@@ -26,7 +26,7 @@ Whether you're a developer looking to build intelligent systems, a product manag
 If you wish to listen to this as a small podcast (also AI generated), check this out: 
 
 <audio controls>
-  <source type="audio/mp3" src="../assets//Understanding_AI_Agents/MCP.wav"></source>
+  <source type="audio/mp3" src="https://github.com/micromastery/micromastery.github.io/raw/refs/heads/main/assets/Understanding_AI_Agents/MCP.wav"></source>
   <p>Your browser does not support the audio element.</p>
 </audio>
 
