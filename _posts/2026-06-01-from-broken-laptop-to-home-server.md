@@ -1,9 +1,11 @@
 ---
 title: "From Broken Laptop to Home Server — The Accidental Homelab"
 date: 2026-06-01
-categories: [Self-Hosting, Infrastructure]
+categories: [Self-Hosting, Homelab Series]
 tags: [homelab, self-hosting, docker, home-server, linux]
 ---
+
+> **Part 1** of the [Homelab Series](/categories/homelab-series/) — building a home server from a broken laptop.
 
 ## A Laptop With No Screen
 
