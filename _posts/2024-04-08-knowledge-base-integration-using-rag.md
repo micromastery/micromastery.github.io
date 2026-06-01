@@ -4,6 +4,7 @@ date: 2024-04-08 00:00:00 +0000
 categories: [AI, Development, LLM]
 tags: [AI, LLM, RAG, Tutorial]
 description: "Give your LLM access to domain-specific knowledge using Retrieval Augmented Generation."
+image: /assets/BannerImages/2024-04-08-knowledge-base-integration-using-rag.png
 ---
 
 ## Why Knowledge Base Embedding

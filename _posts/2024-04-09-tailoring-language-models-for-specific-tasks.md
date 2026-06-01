@@ -4,6 +4,7 @@ date: 2024-04-09 00:00:00 +0000
 categories: [AI, Development, LLM]
 tags: [AI, LLM, Fine-Tuning, RAG, Tutorial]
 description: "A comparison of fine-tuning vs RAG for customizing language models to specific use cases."
+image: /assets/BannerImages/2024-04-09-tailoring-language-models-for-specific-tasks.png
 ---
 
 ## Tailoring Language Models for Specific Tasks

@@ -4,6 +4,7 @@ date: 2024-11-25 00:00:00 +0000
 categories: [AI, Azure, OpenAI, Development]
 tags: [AI, Azure, OpenAI, Development, Structured Outputs, JSON, Constrained Decoding, Data Summarization, Chatbots, Web Scraping, Security, Pydantic, Zod, Tutorial]
 description: "Use structured outputs in OpenAI and Azure OpenAI to get reliable JSON responses from your API calls."
+image: /assets/BannerImages/2024-11-25-azure-open-ai-structured-outputs.png
 ---
 # Unlocking the Power of Structured Outputs in OpenAI and Azure OpenAI
 

@@ -4,6 +4,7 @@ date: 2024-04-07 00:00:00 +0000
 categories: [AI, Development, LLM]
 tags: [AI, LLM, Fine-Tuning, Tutorial]
 description: "Tailor LLM responses to fit a specific style or behaviour using fine-tuning techniques."
+image: /assets/BannerImages/2024-04-07-fine-tuning-llms-for-behavioural-changes.png
 ---
 
 ## Fine-Tuning LLMs for Behavioral Changes
