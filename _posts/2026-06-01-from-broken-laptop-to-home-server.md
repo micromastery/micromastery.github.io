@@ -57,7 +57,7 @@ No rack, no fancy hardware, no UPS. Just an old laptop doing honest work. For no
 
 It didn't start this clean. The path looked like this:
 
-1. **CMD window** — I honestly thought I'd try this for a couple weeks and abandon it. No point setting up WSL or Docker for a weekend experiment. So each service ran in its own CMD window. It worked until the first Windows Update restarted the laptop at 3 AM.
+1. **CMD window** — I honestly thought I'd try this for a couple weeks and abandon it. No point setting up WSL or Docker for a weekend experiment. So each service ran in its own CMD window. It worked for over a month — until a power outage killed everything and I had to restart each one manually.
 2. **Cloudflare tunnel** — ISP router had no port forwarding option. Cloudflare Tunnels solved public access without exposing ports.
 3. **MeshCentral** — Got tired of plugging in a monitor every time I needed to configure something. Self-hosted remote access fixed this.
 4. **Docker Desktop + WSL** — The jump that made everything maintainable. Containers restart themselves, survive updates, and configs are just YAML files.

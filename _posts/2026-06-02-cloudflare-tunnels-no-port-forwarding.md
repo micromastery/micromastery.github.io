@@ -80,17 +80,17 @@ Back in the Cloudflare dashboard, add routes for each service. Each route maps a
 
 | Public Hostname | Service | URL |
 |----------------|---------|-----|
-| `landing.yourdomain.com` | HTTP | `http://reverse-proxy:8000` |
-| `books.yourdomain.com` | HTTP | `http://reverse-proxy:8000` |
-| `ai.yourdomain.com` | HTTP | `http://reverse-proxy:8000` |
+| `landing.yourdomain.com` | HTTP | `http://homepage:8000` |
+| `books.yourdomain.com` | HTTP | `http://kavita:5000` |
+| `ai.yourdomain.com` | HTTP | `http://open-webui:8080` |
+
+Or you can point a wildcard subdomain to a reverse proxy (like Nginx) that handles routing based on the hostname. This is what I do — all traffic goes to `cloudflared`, which forwards to Nginx, and Nginx routes to the right container. More on that in a later post.
 
 <p align="center">
   <img src="../assets/CloudflareTunnel/public_hostnames.png" alt="Cloudflare dashboard showing public hostname configuration">
   <br>
   <em>Each subdomain routes to the reverse proxy — Nginx handles the rest.</em>
 </p>
-
-Notice all routes point to the **reverse proxy**, not individual services. The reverse proxy (Nginx) handles routing based on the hostname. More on that in a later post.
 
 ## Architecture Overview
 
