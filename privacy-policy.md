@@ -1,9 +1,9 @@
-Privacy Policy of Micro Mastery
+Privacy Policy of Sankar's Blog
 ===============================
 
-Micro Mastery operates the https://micromastery.github.io website, which provides the SERVICE.
+Sankar's Blog operates the https://blog.mavsankar.com website, which provides the SERVICE.
 
-This page is used to inform website visitors regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our Service, the Micro Mastery website.
+This page is used to inform website visitors regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our Service, the Sankar's Blog website.
 
 If you choose to use our Service, then you agree to the collection and use of information in relation with this policy. The Personal Information that we collect are used for providing and improving the Service. We will not use or share your information with anyone except as described in this Privacy Policy.
 
@@ -24,6 +24,15 @@ Cookies
 Cookies are files with small amount of data that is commonly used an anonymous unique identifier. These are sent to your browser from the website that you visit and are stored on your computer's hard drive.
 
 Our website might use these "cookies" to collection information and to improve our Service. You will have the option to either accept or refuse these cookies, if applicable. If you choose to refuse our cookies, you may not be able to use some portions of our Service.
+
+Advertising
+-----------
+
+We use Google AdSense to display advertisements on our website. Google AdSense and its advertising partners may use cookies, web beacons, and similar technologies to serve ads based on your prior visits to this website or other websites. Google's use of advertising cookies enables it and its partners to serve ads based on your visit to this site and/or other sites on the Internet.
+
+Third-party vendors, including Google, use cookies to serve ads based on your prior visits to this website or other websites. You may opt out of personalized advertising by visiting [Google Ads Settings](https://www.google.com/settings/ads). Alternatively, you may opt out of third-party vendor cookies for personalized advertising by visiting [www.aboutads.info](http://www.aboutads.info/choices/).
+
+For more information on how Google uses data when you use our site, please visit [How Google uses data when you use our partners' sites or apps](https://policies.google.com/technologies/partner-sites).
 
 Service Providers
 -----------------
