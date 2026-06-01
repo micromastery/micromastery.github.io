@@ -3,6 +3,7 @@ title: "Enhancing LLMs with Custom Capabilities: A Guide to Langchain and Text-t
 date: 2024-02-06 00:00:00 +0000
 categories: [AI, Development, Langchain]
 tags: [AI, Langchain, Custom Capabilities, Text-to-Speech, Python, Tutorial]
+description: "Extend large language models with custom capabilities using Langchain, including text-to-speech integration."
 ---
 
 ## Enhancing Large Language Models with Custom Capabilities Using Langchain

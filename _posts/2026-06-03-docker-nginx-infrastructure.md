@@ -3,6 +3,8 @@ title: "Docker + Nginx — The Infrastructure Layer"
 date: 2026-06-03
 categories: [Self-Hosting, Homelab Series]
 tags: [homelab, docker, nginx, reverse-proxy, wsl, self-hosting]
+description: "Moving from fragile CMD windows to Docker containers with Nginx reverse proxy for a self-healing homelab."
+image: /assets/BannerImages/2026-06-03-docker-nginx-infrastructure.png
 ---
 
 > **Part 3** of the [Homelab Series](/categories/homelab-series/) — from CMD windows to containers, and one reverse proxy to rule them all.

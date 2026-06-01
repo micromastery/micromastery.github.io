@@ -3,6 +3,8 @@ title: Level up your Custom GPTs with GPT Actions
 date: 2024-01-15 00:00:00 +0000
 categories: [Blogging, Automation]
 tags: [Python, flask, github, oauth, gpt, jekyll, automation]
+description: "Set up GPT Actions with a Python backend to automate blog creation on GitHub Pages."
+image: /assets/BannerImages/2024-01-15-automating-blogs-with-gpt-and-python.png
 ---
 
 ## Introduction

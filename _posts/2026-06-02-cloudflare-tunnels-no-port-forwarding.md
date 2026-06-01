@@ -3,6 +3,8 @@ title: "Cloudflare Tunnels — Public Access Without Port Forwarding"
 date: 2026-06-02
 categories: [Self-Hosting, Homelab Series]
 tags: [homelab, cloudflare, networking, tunnels, reverse-proxy]
+description: "Expose home server services to the internet without port forwarding using Cloudflare Tunnels."
+image: /assets/BannerImages/2026-06-02-cloudflare-tunnels-no-port-forwarding.png
 ---
 
 > **Part 2** of the [Homelab Series](/categories/homelab-series/) — exposing your home server to the internet without opening a single port.

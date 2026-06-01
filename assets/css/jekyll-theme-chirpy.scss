@@ -79,4 +79,18 @@
 #checkmark{
   display: none;
 }
+
+/* NEW badge for recent posts */
+.new-badge {
+  display: inline-block;
+  background-color: #f44336;
+  color: #fff;
+  font-size: 0.55em;
+  font-weight: 700;
+  padding: 0.15em 0.5em;
+  border-radius: 0.25em;
+  vertical-align: middle;
+  margin-left: 0.4em;
+  letter-spacing: 0.03em;
+}
   

@@ -3,6 +3,7 @@ title: "Knowledge Base Embedding using Retrieval Augmented Generation (RAG)"
 date: 2024-04-08 00:00:00 +0000
 categories: [AI, Development, LLM]
 tags: [AI, LLM, RAG, Tutorial]
+description: "Give your LLM access to domain-specific knowledge using Retrieval Augmented Generation."
 ---
 
 ## Why Knowledge Base Embedding

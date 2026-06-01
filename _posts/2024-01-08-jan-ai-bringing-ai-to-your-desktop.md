@@ -3,6 +3,8 @@ title: "Jan.AI: Bringing AI to Your Desktop"
 date: 2024-01-08
 categories: ["AI", "Software"]
 tags: ["jan.ai", "AI", "Desktop"]
+description: "Jan.AI is an open-source, self-hosted alternative to ChatGPT that runs completely offline on your desktop."
+image: /assets/BannerImages/2024-01-08-jan-ai-bringing-ai-to-your-desktop.png
 ---
 
 ## Bringing AI to Your Desktop
