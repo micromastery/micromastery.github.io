@@ -162,7 +162,9 @@ Total: the cost of a domain name.
 
 ## What's Next
 
-At this point I could access my services from anywhere — but I still needed a monitor to manage the server itself. In the next post, I'll cover how **MeshCentral** gave me full remote access to a screenless laptop, and why it's better than TeamViewer or AnyDesk for a homelab.
+In my actual journey, the next thing I set up was MeshCentral for remote access (since I was still plugging in a monitor every time). But for this series, I'll go in **logical order** — building up the infrastructure layer by layer so you don't have to go through the refactoring and readjustments I did.
+
+Next up: **Docker + Nginx** — how I moved from fragile CMD windows to Docker Compose, and set up a reverse proxy so every service gets its own clean subdomain.
 
 ---
 
