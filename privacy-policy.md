@@ -37,7 +37,7 @@ Advertising
 
 We use Google AdSense to display advertisements on our website. Google AdSense and its advertising partners may use cookies, web beacons, and similar technologies to serve ads based on your prior visits to this website or other websites. Google's use of advertising cookies enables it and its partners to serve ads based on your visit to this site and/or other sites on the Internet.
 
-Third-party vendors, including Google, use cookies to serve ads based on your prior visits to this website or other websites. You may opt out of personalized advertising by visiting [Google Ads Settings](https://www.google.com/settings/ads). Alternatively, you may opt out of third-party vendor cookies for personalized advertising by visiting [www.aboutads.info](http://www.aboutads.info/choices/).
+Third-party vendors, including Google, use cookies to serve ads based on your prior visits to this website or other websites. You may opt out of personalized advertising by visiting [Google Ads Settings](https://www.google.com/settings/ads). Alternatively, you may opt out of third-party vendor cookies for personalized advertising by visiting [www.aboutads.info](https://www.aboutads.info/choices/).
 
 For more information on how Google uses data when you use our site, please visit [How Google uses data when you use our partners' sites or apps](https://policies.google.com/technologies/partner-sites).
 
