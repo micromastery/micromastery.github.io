@@ -1,3 +1,10 @@
+---
+layout: page
+title: Privacy Policy
+permalink: /privacy-policy/
+ads: false
+---
+
 Privacy Policy of Sankar's Blog
 ===============================
 

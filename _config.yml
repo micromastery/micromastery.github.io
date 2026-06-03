@@ -34,6 +34,10 @@ google_site_verification:
 google_analytics:
   id: G-LTV5L9YDCR
 
+# Google AdSense
+google_adsense:
+  client: ca-pub-6963103368727733
+
 # Theme Mode
 theme_mode: 
 
@@ -79,6 +83,7 @@ defaults:
       type: posts
     values:
       layout: post
+      ads: true
       comments: true
       toc: true
       permalink: /posts/:title/
@@ -90,6 +95,7 @@ defaults:
       path: ""
       type: tabs
     values:
+      ads: false
       layout: page
       permalink: /:title/
   - scope:
