@@ -95,7 +95,7 @@ defaults:
       path: ""
       type: tabs
     values:
-      ads: false
+      ads: true
       layout: page
       permalink: /:title/
   - scope:

@@ -1,13 +1,5 @@
-{% assign ads_enabled = false %}
-
-{% if page.ads == true %}
-  {% assign ads_enabled = true %}
-{% elsif page.layout == 'post' and page.ads != false %}
-  {% assign ads_enabled = true %}
-{% endif %}
-
-{% if ads_enabled and site.google_adsense and site.google_adsense.client %}
-  <!-- Google AdSense -->
+ {% if site.google_adsense and site.google_adsense.client %}
+  <!-- Google AdSense (Auto Ads - controlled via Google AdSense dashboard) -->
   <script
     async
     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.google_adsense.client }}"
