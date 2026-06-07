@@ -42,8 +42,17 @@ refactor: true
 
 <!-- Calculate the "new" threshold: posts less than 14 days old -->
 {% assign now_seconds = 'now' | date: '%s' | plus: 0 %}
+{% assign divider_index = pinned_num | plus: 1 %}
 
 <div id="post-list" class="flex-grow-1 px-xl-1">
+  {% if pinned_num > 0 %}
+    <div class="post-list-divider d-flex align-items-center mb-3">
+      <hr class="flex-grow-1">
+      <span class="mx-3 text-muted small text-uppercase fw-semibold">Pinned</span>
+      <hr class="flex-grow-1">
+    </div>
+  {% endif %}
+
   {% for post in posts %}
     {% assign post_seconds = post.date | date: '%s' | plus: 0 %}
     {% assign post_age = now_seconds | minus: post_seconds %}
@@ -51,6 +60,14 @@ refactor: true
       {% assign is_new = true %}
     {% else %}
       {% assign is_new = false %}
+    {% endif %}
+
+    {% if pinned_num > 0 and forloop.index == divider_index %}
+      <div class="post-list-divider d-flex align-items-center my-3">
+        <hr class="flex-grow-1">
+        <span class="mx-3 text-muted small text-uppercase fw-semibold">Recent Posts</span>
+        <hr class="flex-grow-1">
+      </div>
     {% endif %}
 
     <article class="card-wrapper card">

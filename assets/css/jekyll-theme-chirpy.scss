@@ -93,4 +93,18 @@
   margin-left: 0.4em;
   letter-spacing: 0.03em;
 }
+
+/* Divider between pinned and recent posts */
+.post-list-divider {
+  hr {
+    border: none;
+    border-top: 1px solid var(--border-color, #e0e0e0);
+    opacity: 0.6;
+  }
+  span {
+    white-space: nowrap;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+  }
+}
   
