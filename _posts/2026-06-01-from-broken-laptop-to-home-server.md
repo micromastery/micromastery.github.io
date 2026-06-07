@@ -38,18 +38,12 @@ Here's what this screenless laptop now serves 24/7:
 
 All accessible from anywhere via custom subdomains, secured through Cloudflare.
 
-<div style="text-align: center; margin: 2rem 0;">
-  <div id="screenshot-wrapper" style="position: relative; min-height: 400px; background: #1a1a2e; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
-    <p id="screenshot-loading" style="color: #888; font-style: italic;">Loading live screenshot...</p>
-    <img src="https://homeworkflows.mavsankar.com/webhook/homepage-screenshot" 
-         alt="Homepage dashboard showing all services" 
-         style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); display: none;"
-         loading="lazy"
-         onload="this.style.display='block'; document.getElementById('screenshot-loading').style.display='none'; document.getElementById('screenshot-wrapper').style.minHeight='auto'; document.getElementById('screenshot-wrapper').style.background='none';"
-         onerror="document.getElementById('screenshot-loading').textContent='Screenshot unavailable — server may be offline';" />
-  </div>
-  <p><em>The Homepage dashboard — a live screenshot, always showing the current state.</em></p>
+<div style="position:relative; text-align:center; background:#1a1a2e; border-radius:8px; min-height:400px; display:flex; align-items:center; justify-content:center; overflow:hidden;">
+  <p style="position:absolute; color:#888; font-style:italic; z-index:0;">Loading live screenshot...</p>
+  <img src="https://homeworkflows.mavsankar.com/webhook/homepage-screenshot" alt="Homepage dashboard showing all services" style="position:relative; max-width:100%; border-radius:8px; z-index:1;">
 </div>
+
+_The Homepage dashboard — a live screenshot, always showing the current state._
 
 ## The Setup in 30 Seconds
 

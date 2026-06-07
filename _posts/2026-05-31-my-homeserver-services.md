@@ -11,18 +11,12 @@ image: /assets/BannerImages/2026-05-31-my-homeserver-services.png
 
 ## Dashboard
 
-<div style="text-align: center; margin: 2rem 0;">
-  <div id="screenshot-wrapper" style="position: relative; min-height: 400px; background: #1a1a2e; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
-    <p id="screenshot-loading" style="color: #888; font-style: italic;">Loading live screenshot...</p>
-    <img src="https://homeworkflows.mavsankar.com/webhook/homepage-screenshot" 
-         alt="Homepage Dashboard" 
-         style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); display: none;"
-         loading="lazy"
-         onload="this.style.display='block'; document.getElementById('screenshot-loading').style.display='none'; document.getElementById('screenshot-wrapper').style.minHeight='auto'; document.getElementById('screenshot-wrapper').style.background='none';"
-         onerror="document.getElementById('screenshot-loading').textContent='Screenshot unavailable — server may be offline';" />
-  </div>
-  <p><em>Live screenshot of my homeserver dashboard</em></p>
+<div style="position:relative; text-align:center; background:#1a1a2e; border-radius:8px; min-height:400px; display:flex; align-items:center; justify-content:center; overflow:hidden;">
+  <p style="position:absolute; color:#888; font-style:italic; z-index:0;">Loading live screenshot...</p>
+  <img src="https://homeworkflows.mavsankar.com/webhook/homepage-screenshot" alt="Homepage Dashboard" style="position:relative; max-width:100%; border-radius:8px; z-index:1;">
 </div>
+
+_Live screenshot of my homeserver dashboard_
 
 ---
 
