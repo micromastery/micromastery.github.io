@@ -1,13 +1,13 @@
 ---
-title: "My Homeserver — Live Services Dashboard"
+title: "What's Running on My Homeserver — Live Services"
 date: 2026-05-31
 categories: [Self-Hosting, Homelab Series]
 tags: [homelab, self-hosting, docker, home-server, services, dashboard]
-description: "A live screenshot of my homeserver dashboard showing all the services I self-host."
+description: "A live view of all the services running on my homeserver, dynamically loaded from the actual configuration."
 image: /assets/BannerImages/2026-05-31-my-homeserver-services.png
 ---
 
-> This page shows a **live screenshot** of my homeserver dashboard. What you see below is always up to date with what's actually running.
+> This page is **dynamic** — the services listed below are loaded live from my homeserver's configuration. What you see is what's actually running.
 
 ## Dashboard
 
@@ -20,21 +20,52 @@ _Live screenshot of my homeserver dashboard_
 
 ---
 
-## What's Running
+## Services
 
-The dashboard above is powered by [Homepage](https://gethomepage.dev/) and shows all my self-hosted services at a glance. I keep adding and removing services, so rather than listing them here, the screenshot above is always the source of truth — what you see is exactly what's running right now.
+<div id="services-container" style="margin-top:1rem;">
+  <p style="color:#888; font-style:italic;">Loading services...</p>
+</div>
 
-The services are grouped into categories like apps, monitoring, developer tools, and AI — all running as Docker containers behind a reverse proxy.
+<script>
+(async () => {
+  const container = document.getElementById('services-container');
+  try {
+    const res = await fetch('https://homeworkflows.mavsankar.com/webhook/services');
+    const data = await res.json();
+    const services = data.services;
 
----
+    // Group by category
+    const grouped = {};
+    services.forEach(s => {
+      if (!grouped[s.category]) grouped[s.category] = [];
+      grouped[s.category].push(s);
+    });
 
-## Why Self-Host?
+    let html = '';
+    for (const [category, items] of Object.entries(grouped)) {
+      html += `<h3>${category}</h3>`;
+      html += '<div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:1rem; margin-bottom:1.5rem;">';
+      items.forEach(s => {
+        const docsLink = s.docs ? `<a href="${s.docs}" target="_blank" rel="noopener" style="font-size:0.85em;">Docs ↗</a>` : '';
+        const detailsHtml = s.details ? `<p style="margin:0.5rem 0; color:#ccc; font-size:0.85em;">${s.details}</p>` : '';
+        html += `
+          <div style="border:1px solid #333; border-radius:8px; padding:1rem; background:#1a1a2e;">
+            <strong>${s.name}</strong>
+            <p style="margin:0.4rem 0; color:#aaa; font-size:0.9em;">${s.description}</p>
+            ${detailsHtml}
+            ${docsLink}
+          </div>`;
+      });
+      html += '</div>';
+    }
 
-A few reasons I run all of this instead of using cloud services:
-
-- **Privacy** — My notes, bookmarks, and automations stay on hardware I control
-- **Cost** — After the initial setup, it's just electricity.
-- **Learning** — Docker, networking, reverse proxies, CI/CD — this is a playground for everything.
+    html += `<p style="color:#666; font-size:0.8em; margin-top:2rem;">Last updated: ${new Date(data.lastUpdated).toLocaleDateString()}</p>`;
+    container.innerHTML = html;
+  } catch (e) {
+    container.innerHTML = '<p style="color:#cc6666;">Could not load services. The homeserver might be temporarily offline.</p>';
+  }
+})();
+</script>
 
 ---
 
@@ -46,7 +77,7 @@ This entire stack runs on a 2019 Lenovo Flex 5 with a broken screen:
 - **RAM:** 16 GB DDR4
 - **Storage:** 512 GB NVMe SSD
 - **GPU:** NVIDIA MX130 (used for Ollama inference)
-- **OS:** Ubuntu Server 22.04
+- **OS:** Windows 11 + Docker Desktop (WSL2)
 
 No rack. No enterprise hardware. Just a laptop with the lid closed, running 24/7.
 
