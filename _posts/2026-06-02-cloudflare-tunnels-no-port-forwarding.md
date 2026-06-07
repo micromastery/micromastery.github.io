@@ -23,13 +23,13 @@ A Cloudflare Tunnel creates an outbound-only connection from your server to Clou
 User → Cloudflare Edge → Tunnel → Your Server
 ```
 
-Your server **dials out** to Cloudflare — no inbound ports needed. Your ISP, firewall, NAT — none of it matters. If your machine can make HTTPS requests, it can serve traffic.
+Your server **dials out** to Cloudflare — no inbound ports needed. NAT and port forwarding no longer matter, as long as the server can make outbound connections to Cloudflare (restrictive firewalls must allow outbound access to Cloudflare, including port `7844` for Tunnel operation). If your machine can make HTTPS requests, it can serve traffic.
 
 This is actually **more secure** than traditional port forwarding because:
 - No ports exposed on your router
 - No need for a static IP
 - Cloudflare handles DDoS protection, SSL/TLS, and caching
-- Traffic is encrypted end-to-end through the tunnel
+- Traffic is encrypted in transit (note: Cloudflare terminates TLS at its edge, so it can see your traffic in plaintext — more on this trade-off later)
 
 ## Prerequisites
 
@@ -82,7 +82,7 @@ Back in the Cloudflare dashboard, add routes for each service. Each route maps a
 
 | Public Hostname | Service | URL |
 |----------------|---------|-----|
-| `landing.yourdomain.com` | HTTP | `http://homepage:8000` |
+| `landing.yourdomain.com` | HTTP | `http://homepage:3000` |
 | `books.yourdomain.com` | HTTP | `http://kavita:5000` |
 | `ai.yourdomain.com` | HTTP | `http://open-webui:8080` |
 
@@ -145,11 +145,30 @@ Now even if someone guesses your subdomain, they hit a Cloudflare login screen b
 ## What This Costs
 
 - Cloudflare account: **Free**
-- Tunnel: **Free** (unlimited bandwidth)
+- Tunnel: **Free** (no metered bandwidth, though Cloudflare's free-plan terms discourage serving large volumes of video/file downloads)
 - Domain: ~$10/year
 - Zero Trust (up to 50 users): **Free**
 
 Total: the cost of a domain name.
+
+## Why Not Tailscale?
+
+This comes up a lot. [Tailscale](https://tailscale.com/) is another popular solution for accessing home services without port forwarding. Tailscale creates a private WireGuard-based mesh between your devices, so you do not need to expose the service publicly or run a public reverse proxy.
+
+**Tailscale is great if:**
+- You primarily need access from your own devices (mesh VPN between them)
+- You want a private network with minimal setup
+- You don't need custom domains (Tailscale Funnel gives you a `*.ts.net` URL but not your own domain, and is limited to ports `443`, `8443`, and `10000`, TLS-only, with non-configurable bandwidth limits)
+
+**I chose Cloudflare Tunnels because:**
+- I want **public URLs** with custom subdomains — sharing a link to my Kavita library or letting someone access a specific service without installing anything
+- Cloudflare handles **SSL, DDoS protection, and caching** for free
+- **Zero Trust access policies** let me gate specific services behind email-based login (no VPN client needed on the accessing device)
+- It works with the same domain I already use for everything else
+
+The tradeoff is clear: Tailscale is simpler and more private; Cloudflare Tunnels give you public-facing services with fine-grained access control. If you don't need public access, Tailscale is the easier answer. I needed both public and private access patterns, so Cloudflare was the better fit.
+
+You could also use both — Tailscale for admin access (SSH, MeshCentral) and Cloudflare for user-facing services. Many homelabbers apparently do this.
 
 ## Before and After
 
