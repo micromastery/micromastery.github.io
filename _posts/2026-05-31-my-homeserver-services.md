@@ -8,6 +8,8 @@ image: /assets/BannerImages/2026-05-31-my-homeserver-services.png
 pin: true
 ---
 
+> Part of the [Homelab Series](/categories/homelab-series/) — a live reference page for all services running on my home server.
+
 > This page is **dynamic** — the services listed below are loaded live from my homeserver's configuration. What you see is what's actually running.
 
 ## Dashboard
