@@ -35,6 +35,6 @@ This approach involves equipping the LLM with a wealth of domain-specific inform
 
 Now that you are familiar with the most popular strategies for adapting LLMs to fit specific needs, check out the following posts for practical, step-by-step tutorials:
 
-### [Getting Started with Fine-Tuning](https://micromastery.github.io/posts/fine-tuning-llms-for-behavioral-changes/)
+### [Getting Started with Fine-Tuning](../_posts/2024-04-07-fine-tuning-llms-for-behavioural-changes.md)
 
-### [Integrating Knowledge Bases with LLMs](https://micromastery.github.io/posts/knowledge-base-integration-using-rag/)
+### [Integrating Knowledge Bases with LLMs](../_posts/2024-04-08-knowledge-base-integration-using-rag.md)

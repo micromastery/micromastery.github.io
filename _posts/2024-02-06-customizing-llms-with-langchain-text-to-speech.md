@@ -10,7 +10,7 @@ description: "Extend large language models with custom capabilities using Langch
 
 In the rapidly evolving landscape of AI and machine learning, the ability to extend and customize large language models (LLMs) has become increasingly important. Langchain, a powerful framework for building applications on top of LLMs, offers a streamlined approach for integrating custom capabilities. This blog post will guide you through a practical example of how to use Langchain to create a custom capability—specifically, converting text to speech—and how to integrate it with an OpenAI model.
 
-Note: The same concept can be used for customizing Crew AI agents discussed in this post [Meet Your Digital Dream Team: Revolutionizing the Tech World with AI](https://micromastery.github.io/posts/meet-your-digital-dream-team-revolutionizing-tech-world-with-ai/#language-model-and-tools)
+Note: The same concept can be used for customizing Crew AI agents discussed in this post [Meet Your Digital Dream Team: Revolutionizing the Tech World with AI](../_posts/2024-01-30-meet-your-digital-dream-team-revolutionizing-tech-world-with-ai.md/#language-model-and-tools)
 
 
 ## Setting Up Your Environment
