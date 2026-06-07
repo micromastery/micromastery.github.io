@@ -262,7 +262,11 @@ They all join the shared `homeserver` network and get a subdomain through the re
 
 ## What's Next
 
-The weekly digest workflow hints at it — there's a local AI model running on this laptop. Next post: setting up Ollama, choosing models that fit in limited VRAM, and building an AI stack on hardware that was never meant for it.
+This series covered the infrastructure — Cloudflare, Docker, Nginx, Gitea, MeshCentral — and now the first real services. But Memos, Linkwarden, and n8n are just the beginning. There's also local AI (Ollama running on that MX130 GPU), a PDF toolkit, file sharing, ebook library, smart home control, and more.
+
+Rather than writing a separate post for each service, I maintain a **[live services page](/posts/my-homeserver-services/)** that dynamically loads everything currently running on the server — with descriptions, what I use each one for, and documentation links. It updates automatically whenever I add or remove something.
+
+Keep checking that page, or better yet — if you've followed this series and set up n8n yourself, create a workflow that checks the page periodically and notifies you when something new shows up. That's the kind of automation a homelab enables.
 
 ---
 
