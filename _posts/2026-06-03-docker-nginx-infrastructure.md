@@ -234,7 +234,7 @@ Five minutes, start to finish. In fact, the patterns are so consistent that AI t
 
 ## What's Next
 
-The infrastructure is solid — containers restart themselves, traffic routes cleanly, and everything is accessible from anywhere. But I'm still remoting in and running commands manually whenever I want to update something. Next up: **Gitea + CI/CD** — self-hosted Git with automated deployments, so pushing code is all it takes to update a running service.
+The infrastructure is solid — containers restart themselves, traffic routes cleanly, and everything is accessible from anywhere. But there's still the physical problem: **this laptop has no screen**. Every time I need to change a Windows setting or debug something at the OS level, I'm carrying the laptop to a monitor. Next up: **MeshCentral** — full remote desktop access to a headless laptop, entirely self-hosted.
 
 ---
 
