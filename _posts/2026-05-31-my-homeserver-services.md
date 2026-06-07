@@ -56,7 +56,7 @@ No rack. No enterprise hardware. Just a laptop with the lid closed, running 24/7
 
 ## The Series
 
-This post is part of the **Homelab Series** where I document building this entire setup from scratch. Check out all the posts in the series [here](/categories/homelab-series/).
+This post is part of the **Homelab Series** where I document building this entire setup from scratch. To know how the journey started, read [Part 1 — From Broken Laptop to Home Server](/posts/from-broken-laptop-to-home-server/). Check out all the posts in the series [here](/categories/homelab-series/).
 
 ---
 
