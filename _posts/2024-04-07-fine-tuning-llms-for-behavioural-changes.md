@@ -11,6 +11,9 @@ image: /assets/BannerImages/2024-04-07-fine-tuning-llms-for-behavioural-changes.
 
 Fine-Tuning is one of the most popular techniques to tailor LLMs for specific use cases or needs. This method allows you to mold the LLM’s responses to fit a certain style or behaviour, making it possible for the model to emulate specific communication patterns. This can be particularly useful for personalizing interactions or creating a unique brand voice. For example, you can fine tune the LLM to respond to your chats in your own style. In this post, we will go through a demonstration of how finetuning can be used to tweak the responses of LLMs.
 
+> Fine-tuning is one of two main ways to customize an LLM. For the other approach and guidance on when to use each, see [Tailoring Language Models for Specific Tasks](/posts/tailoring-language-models-for-specific-tasks/) and [Knowledge Base Embedding using RAG](/posts/knowledge-base-integration-using-rag/).
+{: .prompt-tip }
+
 The below diagram explains how finetuning is done
 
 ![Fine-Tuning](../assets/FineTuning/Fine%20tuning.png)

@@ -13,6 +13,9 @@ Suppose you have a very capable and powerful LLM, however, to use it you want it
 
 In knowledge base embedding, when the user asks a question, we search for the relevant information in the knowledge base and augment it to the user's query. Hence the famous name "Retrieval Augmented Generation (RAG)". The below diagram explains how RAG is done
 
+> Not sure whether RAG or fine-tuning is right for your use case? See [Tailoring Language Models for Specific Tasks](/posts/tailoring-language-models-for-specific-tasks/) for a side-by-side comparison, or learn the alternative approach in [Fine-Tuning LLMs for Behavioral Changes](/posts/fine-tuning-llms-for-behavioural-changes/).
+{: .prompt-tip }
+
 ![rag](../assets/RAG/Rag.png)
 
 

@@ -89,7 +89,7 @@ Several design patterns enable AI agents to perform complex tasks and work colla
 
 ### Agentic Retrieval Augmented Generation (RAG)
 
-- **Basic RAG** allows LLMs to retrieve relevant information from a database and add it to the conversation context, providing more relevant responses beyond just training data.
+- **Basic RAG** allows LLMs to retrieve relevant information from a database and add it to the conversation context, providing more relevant responses beyond just training data. (For a hands-on walkthrough of building basic RAG from scratch, see [Knowledge Base Embedding using RAG](/posts/knowledge-base-integration-using-rag/).)
 - **Agentic RAG** enhances this by enabling the agent to analyze the query, create a plan of smaller tasks using data sources and tools, and **verify if retrieved information is sufficient**. If not, it can repeat the tool-calling process.
 - A key benefit is the agent's ability to **maintain long-term memory** of this process, recalling previous attempts to improve future interactions.
 
