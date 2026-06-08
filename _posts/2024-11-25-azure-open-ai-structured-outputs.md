@@ -6,9 +6,8 @@ tags: [AI, Azure, OpenAI, Development, Structured Outputs, JSON, Constrained Dec
 description: "Use structured outputs in OpenAI and Azure OpenAI to get reliable JSON responses from your API calls."
 image: /assets/BannerImages/2024-11-25-azure-open-ai-structured-outputs.png
 ---
-# Unlocking the Power of Structured Outputs in OpenAI and Azure OpenAI
 
-### **Introduction**
+## Introduction
 
 In the rapidly evolving landscape of artificial intelligence, staying ahead of the curve means embracing innovations that make technology more intuitive, reliable, and accessible. About a month ago, OpenAI introduced a groundbreaking feature to their API: structured outputs. The feature is available for the versions
 

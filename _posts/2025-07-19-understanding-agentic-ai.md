@@ -7,7 +7,6 @@ mermaid: true
 description: "A comprehensive guide to AI agents — core components, design principles, architectural patterns, and deployment."
 image: /assets/BannerImages/2025-07-19-understanding-agentic-ai.png
 ---
-# My Notes on Agentic AI - Fundamentals
 
 ## Introduction
 

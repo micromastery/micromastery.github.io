@@ -10,16 +10,16 @@ pin: true
 
 > Part of the [Homelab Series](/categories/homelab-series/) — a live reference page for all services running on my home server.
 
-> This page is **dynamic** — the services list and the dashboard screenshot are both pulled from my homeserver and refresh roughly every couple of hours (cached at the edge so I don't overload the little laptop). What you see is very close to what's actually running.
+> This page is **dynamic** — the services listed below are loaded from my homeserver's configuration, and the dashboard screenshot refreshes roughly every couple of hours (it's cached at the edge so I don't overload the little laptop). What you see is very close to what's actually running.
 
 ## Dashboard
 
 <div style="position:relative; text-align:center; background:#1a1a2e; border-radius:8px; min-height:400px; display:flex; align-items:center; justify-content:center; overflow:hidden;">
-  <p style="position:absolute; color:#888; font-style:italic; z-index:0;">Loading screenshot...</p>
+  <p style="position:absolute; color:#888; font-style:italic; z-index:0;">Loading live screenshot...</p>
   <img id="dashboard-screenshot" src="https://homeworkflows.mavsankar.com/webhook/homepage-screenshot" alt="Homepage Dashboard" style="position:relative; max-width:100%; border-radius:8px; z-index:1;">
 </div>
 
-<p id="screenshot-timestamp" style="color:#666; font-size:0.8em; text-align:center;">Screenshot of my homeserver dashboard (refreshed roughly every couple of hours)</p>
+<p id="screenshot-timestamp" style="color:#666; font-size:0.8em; text-align:center;">Screenshot of my homeserver dashboard (refreshed roughly every couple of hours)_</p>
 
 <script>
 document.getElementById('dashboard-screenshot').addEventListener('load', function() {
