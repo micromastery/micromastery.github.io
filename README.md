@@ -45,6 +45,26 @@ $ bundle
 
 Please see the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy#documentation).
 
+## AdSense diagnostic unit
+
+A single responsive display unit (`9225879554`) is placed after the introduction
+in [the AI agents article](_posts/2025-07-19-understanding-agentic-ai.md), served at
+`/posts/understanding-agentic-ai/`. Other pages and Auto ads settings are unchanged.
+The unit reuses the site's existing AdSense loader in
+[_includes/metadata-hook.html](_includes/metadata-hook.html); do not add a second loader.
+
+After deployment, inspect the article in browser developer tools:
+
+- Confirm a request to `/pagead/ads` with `slotname=9225879554`.
+- Inspect `ins[data-ad-slot="9225879554"]` for `data-adsbygoogle-status="done"`
+  and `data-ad-status="filled"` or `"unfilled"`.
+- Check the console if initialization fails. A successful HTTP response alone
+  does not prove that Google returned an ad or that an impression occurred.
+
+Do not click your own ads or repeatedly reload the page to generate traffic.
+To remove the diagnostic unit, remove its `<ins>` and following initialization
+`<script>` from that article; keep the shared loader for Auto ads.
+
 ## License
 
 This work is published under [MIT][mit] License.
