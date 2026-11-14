@@ -1,0 +1,35 @@
+{%- comment -%}
+  Responsive banner thumbnail for the home page.
+  Params: post, sizes, eager (true for the first, above-the-fold image).
+  Uses WebP thumbnails from assets/BannerImages/thumbs (made by tools/make-thumbnails.py)
+  and falls back to the original image when a thumbnail doesn't exist.
+  The newline after "<img" is deliberate: it stops the theme's refactor-content.html
+  from rewriting these tags (it would force lazy-loading and add wrappers).
+{%- endcomment -%}
+{%- assign _src = include.post.image.path | default: include.post.image -%}
+{%- unless _src -%}
+<div class="media-placeholder" aria-hidden="true"><i class="fas fa-file-lines"></i></div>
+{%- endunless -%}
+{%- if _src -%}
+  {%- assign _alt = include.post.image.alt | default: include.post.title | strip_html | escape -%}
+  {%- assign _stem = _src | split: '/' | last | split: '.' | first -%}
+  {%- assign _thumb_small = '/assets/BannerImages/thumbs/' | append: _stem | append: '-480.webp' -%}
+  {%- assign _thumb_large = '/assets/BannerImages/thumbs/' | append: _stem | append: '-960.webp' -%}
+  {%- assign _has_thumb = site.static_files | where: 'path', _thumb_small | first -%}
+  {%- if _has_thumb -%}
+    {%- if include.eager -%}{%- assign _default = _thumb_large -%}{%- else -%}{%- assign _default = _thumb_small -%}{%- endif -%}
+<img
+  src="{{ _default | relative_url }}"
+  srcset="{{ _thumb_small | relative_url }} 480w, {{ _thumb_large | relative_url }} 960w"
+  sizes="{{ include.sizes }}"
+  width="480" height="270" alt="{{ _alt }}" decoding="async"
+  {% if include.eager %}fetchpriority="high"{% else %}loading="lazy"{% endif %}>
+  {%- else -%}
+    {%- unless _src contains '//' -%}
+      {%- assign _src = include.post.img_path | append: '/' | append: _src | replace: '//', '/' | relative_url -%}
+    {%- endunless -%}
+<img
+  src="{{ _src }}" width="480" height="270" alt="{{ _alt }}" decoding="async"
+  {% if include.eager %}fetchpriority="high"{% else %}loading="lazy"{% endif %}>
+  {%- endif -%}
+{%- endif -%}

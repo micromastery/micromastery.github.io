@@ -1,0 +1,31 @@
+{%- comment -%}
+  Card used in the home page's Featured section.
+  Params: post, variant ('hero' or 'card'), eager, sizes, now (epoch seconds), new_window (seconds).
+{%- endcomment -%}
+{%- assign _card_post = include.post -%}
+{%- assign _card_secs = _card_post.date | date: '%s' | plus: 0 -%}
+{%- assign _card_age = include.now | minus: _card_secs -%}
+{%- assign _card_topic = _card_post.categories.first -%}
+<article class="post-card post-card--{{ include.variant }}" data-topic="{{ _card_topic | slugify }}">
+  <a href="{{ _card_post.url | relative_url }}">
+    <div class="post-card-media">
+      {% include home-thumb.html post=_card_post eager=include.eager sizes=include.sizes %}
+    </div>
+    <div class="post-card-body">
+      <div class="post-eyebrow">
+        {% if _card_age < include.new_window %}<span class="new-badge">NEW</span>{% endif %}
+        {% if _card_topic %}<span class="topic-label">{{ _card_topic }}</span>{% endif %}
+      </div>
+      <h3 class="post-card-title">{{ _card_post.title }}</h3>
+      <p class="post-desc">{{ _card_post.description | default: _card_post.excerpt | strip_html | truncate: 220 }}</p>
+      <div class="post-meta-line">
+        {% include datetime.html date=_card_post.date lang=include.lang %}
+        <span aria-hidden="true">·</span>
+        {% include read-time.html content=_card_post.content lang=include.lang prompt=true %}
+      </div>
+      {% if include.variant == 'hero' %}
+        <span class="read-more">Read article <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+      {% endif %}
+    </div>
+  </a>
+</article>

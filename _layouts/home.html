@@ -1,151 +1,176 @@
 ---
 layout: default
-refactor: true
 ---
 
 {% include lang.html %}
 
-{% assign pinned = site.posts | where: 'pin', 'true' %}
-{% assign default = site.posts | where_exp: 'item', 'item.pin != true and item.hidden != true' %}
+{%- comment -%}
+  Home page, content first:
+  1. Featured: posts from the last 14 days, then posts with `featured: true` (newest first).
+     1 post = large card; 2 = two cards; 3+ = large card followed by a grid.
+  2. The Homelab Series in order, numbered from Part 0.
+  3. Every post as rows grouped by year, filterable by topic (each post's first category).
+  "New" is evaluated at build time; the deploy workflow rebuilds daily.
+{%- endcomment -%}
 
-{% assign posts = '' | split: '' %}
-
-<!-- Get pinned posts -->
-
-{% assign offset = paginator.page | minus: 1 | times: paginator.per_page %}
-{% assign pinned_num = pinned.size | minus: offset %}
-
-{% if pinned_num > 0 %}
-  {% for i in (offset..pinned.size) limit: pinned_num %}
-    {% assign posts = posts | push: pinned[i] %}
-  {% endfor %}
-{% else %}
-  {% assign pinned_num = 0 %}
-{% endif %}
-
-<!-- Get default posts -->
-
-{% assign default_beg = offset | minus: pinned.size %}
-
-{% if default_beg < 0 %}
-  {% assign default_beg = 0 %}
-{% endif %}
-
-{% assign default_num = paginator.posts | size | minus: pinned_num %}
-{% assign default_end = default_beg | plus: default_num | minus: 1 %}
-
-{% if default_num > 0 %}
-  {% for i in (default_beg..default_end) %}
-    {% assign posts = posts | push: default[i] %}
-  {% endfor %}
-{% endif %}
-
-<!-- Calculate the "new" threshold: posts less than 14 days old -->
 {% assign now_seconds = 'now' | date: '%s' | plus: 0 %}
-{% assign divider_index = pinned_num | plus: 1 %}
+{% assign new_window_seconds = 1209600 %}
+{% assign series_category = 'Homelab Series' %}
 
-<div id="post-list" class="flex-grow-1 px-xl-1">
-  {% if pinned_num > 0 %}
-    <div class="post-list-divider d-flex align-items-center mb-3">
-      <hr class="flex-grow-1">
-      <span class="mx-3 text-muted small text-uppercase fw-semibold">Pinned</span>
-      <hr class="flex-grow-1">
-    </div>
+{% assign visible_posts = site.posts | where_exp: 'item', 'item.hidden != true' %}
+
+{% assign new_posts = '' | split: '' %}
+{% assign chosen_posts = '' | split: '' %}
+{% assign topics = '' | split: '' %}
+
+{% for post in visible_posts %}
+  {% assign post_seconds = post.date | date: '%s' | plus: 0 %}
+  {% assign post_age = now_seconds | minus: post_seconds %}
+  {% if post_age < new_window_seconds %}
+    {% assign new_posts = new_posts | push: post %}
+  {% elsif post.featured %}
+    {% assign chosen_posts = chosen_posts | push: post %}
+  {% endif %}
+  {% if post.categories.size > 0 %}
+    {% assign topics = topics | push: post.categories.first %}
+  {% endif %}
+{% endfor %}
+
+{% assign featured = new_posts | concat: chosen_posts %}
+{% assign topics = topics | uniq %}
+
+{%- comment -%} The series starts at Part 0 (the live services page), so parts are numbered from 0 by date. {%- endcomment -%}
+{% assign series_posts = visible_posts
+  | where_exp: 'item', 'item.categories contains series_category'
+  | reverse
+%}
+
+<div id="home" class="flex-grow-1">
+  {% if featured.size > 0 %}
+    <section class="home-section" aria-labelledby="featured-title">
+      <div class="home-section-header">
+        <h2 id="featured-title" class="home-section-title">Featured</h2>
+      </div>
+
+      {% if featured.size == 2 %}
+        {% assign grid_posts = featured %}
+      {% else %}
+        {% include home-card.html
+          post=featured.first variant='hero' eager=true
+          sizes='(min-width: 1200px) 600px, 100vw'
+          now=now_seconds new_window=new_window_seconds lang=lang
+        %}
+        {% assign grid_posts = featured | shift %}
+      {% endif %}
+
+      {% if grid_posts.size > 0 %}
+        <div class="featured-grid featured-grid--{{ grid_posts.size }}">
+          {% for post in grid_posts %}
+            {% if featured.size == 2 and forloop.first %}{% assign card_eager = true %}{% else %}{% assign card_eager = false %}{% endif %}
+            {% include home-card.html
+              post=post variant='card' eager=card_eager
+              sizes='(min-width: 768px) 480px, 100vw'
+              now=now_seconds new_window=new_window_seconds lang=lang
+            %}
+          {% endfor %}
+        </div>
+      {% endif %}
+    </section>
   {% endif %}
 
-  {% for post in posts %}
-    {% assign post_seconds = post.date | date: '%s' | plus: 0 %}
-    {% assign post_age = now_seconds | minus: post_seconds %}
-    {% if post_age < 1209600 %}
-      {% assign is_new = true %}
-    {% else %}
-      {% assign is_new = false %}
-    {% endif %}
+  {% if series_posts.size > 0 %}
+    {% assign series_slug = series_category | slugify %}
+    <section class="home-section home-series" aria-labelledby="series-title">
+      <div class="home-section-header">
+        <div>
+          <h2 id="series-title" class="home-section-title">{{ series_category }}</h2>
+          <p class="home-section-sub">
+            How I turned an old laptop into a home server, step by step. Part 0 shows what's running today;
+            Part 1 is where it started.
+          </p>
+        </div>
+        <a class="home-section-link" href="{{ '/categories/' | append: series_slug | append: '/' | relative_url }}">
+          View series <i class="fas fa-arrow-right" aria-hidden="true"></i>
+        </a>
+      </div>
 
-    {% if pinned_num > 0 and forloop.index == divider_index %}
-      <div class="post-list-divider d-flex align-items-center my-3">
-        <hr class="flex-grow-1">
-        <span class="mx-3 text-muted small text-uppercase fw-semibold">Recent Posts</span>
-        <hr class="flex-grow-1">
+      <ol class="series-grid">
+        {% for post in series_posts %}
+          <li class="series-card">
+            <a href="{{ post.url | relative_url }}">
+              <div class="series-card-media">
+                {% include home-thumb.html post=post sizes='(min-width: 992px) 260px, (min-width: 768px) 45vw, 72vw' %}
+                <span class="series-num">Part {{ forloop.index0 }}</span>
+              </div>
+              <span class="series-card-title">{{ post.title }}</span>
+            </a>
+          </li>
+        {% endfor %}
+      </ol>
+    </section>
+  {% endif %}
+
+  <section id="all-posts" class="home-section" aria-labelledby="all-posts-title">
+    <div class="home-section-header">
+      <div>
+        <h2 id="all-posts-title" class="home-section-title">All posts</h2>
+        <p class="home-section-sub">Every article, newest first.</p>
+      </div>
+    </div>
+
+    {% if topics.size > 1 %}
+      <div class="topic-filter" role="group" aria-label="Filter posts by topic" hidden>
+        <button type="button" class="topic-chip" data-topic="all" aria-pressed="true">
+          All <span class="topic-count">{{ visible_posts.size }}</span>
+        </button>
+        {% for topic in topics %}
+          {% assign topic_posts = visible_posts | where_exp: 'item', 'item.categories.first == topic' %}
+          <button type="button" class="topic-chip" data-topic="{{ topic | slugify }}" aria-pressed="false">
+            {{ topic }} <span class="topic-count">{{ topic_posts.size }}</span>
+          </button>
+        {% endfor %}
       </div>
     {% endif %}
 
-    <article class="card-wrapper card">
-      <a href="{{ post.url | relative_url }}" class="post-preview row g-0 flex-md-row-reverse">
-        {% assign card_body_col = '12' %}
+    {% assign current_year = '' %}
+    {% for post in visible_posts %}
+      {% assign year = post.date | date: '%Y' %}
+      {% assign post_seconds = post.date | date: '%s' | plus: 0 %}
+      {% assign post_age = now_seconds | minus: post_seconds %}
+      {% assign topic = post.categories.first %}
 
-        {% if post.image %}
-          {% assign src = post.image.path | default: post.image %}
-          {% unless src contains '//' %}
-            {% assign src = post.img_path | append: '/' | append: src | replace: '//', '/' %}
-          {% endunless %}
+      {% if year != current_year %}
+        {% unless forloop.first %}</ul></div>{% endunless %}
+        <div class="year-group">
+          <div class="year-heading">{{ year }}</div>
+          <ul class="post-rows">
+        {% assign current_year = year %}
+      {% endif %}
 
-          {% assign alt = post.image.alt | xml_escape | default: 'Preview Image' %}
-
-          {% assign lqip = null %}
-
-          {% if post.image.lqip %}
-            {% capture lqip %}lqip="{{ post.image.lqip }}"{% endcapture %}
-          {% endif %}
-
-          <div class="col-md-5">
-            <img src="{{ src }}" alt="{{ alt }}" {{ lqip }}>
+      <li class="post-row" data-topic="{{ topic | slugify }}">
+        <a href="{{ post.url | relative_url }}">
+          <div class="post-row-media">
+            {% include home-thumb.html post=post sizes='(min-width: 576px) 208px, 104px' %}
           </div>
-
-          {% assign card_body_col = '7' %}
-        {% endif %}
-
-        <div class="col-md-{{ card_body_col }}">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">
+          <div class="post-row-body">
+            <h3 class="post-row-title">
               {{ post.title }}
-              {% if is_new %}
-                <span class="new-badge">NEW</span>
-              {% endif %}
-            </h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>
-                {% include no-linenos.html content=post.content %}
-                {{ content | markdownify | strip_html | truncate: 200 | escape }}
-              </p>
+              {% if post_age < new_window_seconds %}<span class="new-badge">NEW</span>{% endif %}
+            </h3>
+            <p class="post-desc">{{ post.description | default: post.excerpt | strip_html | truncate: 180 }}</p>
+            <div class="post-meta-line">
+              {% if topic %}<span class="topic-label">{{ topic }}</span><span aria-hidden="true">·</span>{% endif %}
+              {% include datetime.html date=post.date lang=lang %}
+              <span aria-hidden="true">·</span>
+              {% include read-time.html content=post.content lang=lang prompt=true %}
             </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                {% include datetime.html date=post.date lang=lang %}
-
-                <!-- categories -->
-                {% if post.categories.size > 0 %}
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    {% for category in post.categories %}
-                      {{ category }}
-                      {%- unless forloop.last -%},{%- endunless -%}
-                    {% endfor %}
-                  </span>
-                {% endif %}
-              </div>
-
-              {% if post.pin %}
-                <div class="pin ms-1">
-                  <i class="fas fa-thumbtack fa-fw"></i>
-                  <span>{{ site.data.locales[lang].post.pin_prompt }}</span>
-                </div>
-              {% endif %}
-            </div>
-            <!-- .post-meta -->
           </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  {% endfor %}
-</div>
-<!-- #post-list -->
+        </a>
+      </li>
 
-{% if paginator.total_pages > 1 %}
-  {% include post-paginator.html %}
-{% endif %}
+      {% if forloop.last %}</ul></div>{% endif %}
+    {% endfor %}
+  </section>
+</div>
+
+<script src="{{ '/assets/js/home-filter.js' | relative_url }}" defer></script>

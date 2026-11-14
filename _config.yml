@@ -10,9 +10,9 @@ lang: en
 timezone: 
 
 # jekyll-seo-tag settings
-title: Sankar's Blog- Software Development, AI, and Technology
+title: Sankar's Blog
 tagline: Simplifying Mastery, One Topic at a Time
-description: A blog by a software engineer exploring technology, software development, AI, and practical knowledge from real-world experiences..
+description: A software engineer's plain-English guides to AI, LLMs, self-hosting and running a home server, based on real projects.
 # Site URL
 url: "https://blog.mavsankar.com"
 
@@ -44,6 +44,9 @@ theme_mode:
 # Avatar URL
 avatar: /assets/img/favicons/android-chrome-512x512.png
 
+# Default image for link previews on pages without their own `image`
+social_preview_image: /assets/img/favicons/android-chrome-512x512.png
+
 # Comments System: Utterances
 comments:
   active: utterances
@@ -55,8 +58,9 @@ comments:
 pwa:
   enabled: true
 
-# Number of posts per page
-paginate: 10
+# Number of posts per page. The home page lists every post (with a topic filter),
+# so keep this above the post count to avoid duplicate /page2/ pages.
+paginate: 1000
 
 # Base URL
 baseurl: ""

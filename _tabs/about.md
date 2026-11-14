@@ -2,6 +2,8 @@
 layout: page
 icon: fas fa-info-circle
 order: 4
+# The sidebar's About link goes here instead of this page (see _includes/sidebar.html)
+external_url: https://www.mavsankar.com
 ---
 
 Hey, I'm Sankar — a Software Engineer at Microsoft, working on scalable systems with .NET and Azure.
