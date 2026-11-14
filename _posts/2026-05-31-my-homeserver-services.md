@@ -5,6 +5,8 @@ categories: [Self-Hosting, Homelab Series]
 tags: [homelab, self-hosting, docker, home-server, services, dashboard]
 description: "A live view of all the services running on my homeserver, dynamically loaded from the actual configuration."
 image: /assets/BannerImages/2026-05-31-my-homeserver-services.png
+# Its services list and screenshot are loaded by JavaScript, which dev.to strips out
+crosspost: false
 ---
 
 > **Part 0** of the [Homelab Series](/categories/homelab-series/) — a live reference page for all services running on my home server.

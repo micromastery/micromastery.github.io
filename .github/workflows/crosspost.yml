@@ -1,0 +1,81 @@
+name: "Cross-post to dev.to"
+
+# Run manually from the Actions tab. Needs the repository secret DEVTO_API_KEY
+# (dev.to → Settings → Extensions → DEV Community API Keys).
+# Posts already on dev.to are matched by their canonical URL and skipped unless "update" is ticked.
+on:
+  workflow_dispatch:
+    inputs:
+      since:
+        description: "Cross-post posts dated on or after (YYYY-MM-DD)"
+        default: "2026-01-01"
+      posts:
+        description: "Or only these _posts file names, space-separated (overrides 'since')"
+        default: ""
+      mode:
+        description: "Publish now or create drafts on dev.to"
+        type: choice
+        options: [publish, draft]
+        default: publish
+      update:
+        description: "Also update articles that are already on dev.to"
+        type: boolean
+        default: false
+      dry_run:
+        description: "Dry run: convert only, upload the result as an artifact, send nothing"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: crosspost
+  cancel-in-progress: false
+
+jobs:
+  crosspost:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Produces _data/banner_images.json, so dev.to covers use the same optimized
+      # banner images the deployed blog serves.
+      - name: Generate banner images
+        run: |
+          pip install pillow pyyaml
+          python tools/make-thumbnails.py
+
+      - name: Cross-post
+        env:
+          DEVTO_API_KEY: ${{ secrets.DEVTO_API_KEY }}
+          SINCE: ${{ inputs.since }}
+          POSTS: ${{ inputs.posts }}
+          MODE: ${{ inputs.mode }}
+          UPDATE: ${{ inputs.update }}
+          DRY_RUN: ${{ inputs.dry_run }}
+        run: |
+          args=()
+          if [ -n "$POSTS" ]; then
+            read -ra post_list <<< "$POSTS"
+            args+=(--posts "${post_list[@]}")
+          else
+            args+=(--since "$SINCE")
+          fi
+          if [ "$MODE" = "publish" ]; then args+=(--publish); fi
+          if [ "$UPDATE" = "true" ]; then args+=(--update); fi
+          if [ "$DRY_RUN" = "true" ]; then args+=(--dry-run --out crosspost-preview); fi
+          python tools/crosspost.py "${args[@]}"
+
+      - name: Upload dry-run preview
+        if: ${{ inputs.dry_run }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: crosspost-preview
+          path: crosspost-preview

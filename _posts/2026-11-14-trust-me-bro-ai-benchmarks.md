@@ -397,20 +397,6 @@ Things are slowly improving. In 2026, more tests are:
 
 Even OpenAI's SWE-bench Pro investigation ends by calling for new benchmarks "built by experienced software developers specifically to test model capabilities".
 
-## A Checklist for Reading Launch Charts
-
-Next time you see a chart claiming a new model is the best, look at the small print and ask these questions:
-
-- [ ] **Who ran the test?** Was it the company itself, or an independent organisation? Has anyone else repeated it?
-- [ ] **How many attempts did the model get?** Look for labels like `cons@64`, `maj@32`, `CoT@32`, "parallel test-time compute" or "high compute". All of these mean the model got multiple attempts.
-- [ ] **Were all the models tested the same way?** Or were competitors' numbers copied from their own announcements, which used different settings?
-- [ ] **Did the model get extra help?** For coding and agent tests, look for custom tools, extra retries or longer time limits.
-- [ ] **Was the full test used?** Look for phrases like "omits N problems" or "on our infrastructure".
-- [ ] **Is the test still useful?** Is every model scoring near 100%? Have models probably seen the questions? Have the test's own creators stopped using it?
-- [ ] **Is the lead bigger than luck?** On a 198-question test, 1 point is about 2 questions.
-- [ ] **What's missing?** If a coding model's launch doesn't mention the coding test everyone else reports, ask why.
-- [ ] **What did it cost?** A model that scores 2 points higher but costs 10 times as much per task isn't clearly better.
-
 ## The Best Benchmark Is Your Own
 
 The most reliable way to compare models is to **test them on your own work**:
