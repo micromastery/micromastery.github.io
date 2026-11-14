@@ -66,29 +66,12 @@ def html_img_to_markdown(match: re.Match) -> str:
     return f"![{alt.group(1) if alt else ''}]({absolute(src.group(1))})"
 
 
-def wrap_liquid_code_blocks(body: str) -> str:
-    """dev.to runs Liquid over the body; `{{ }}`/`{% %}` inside code must sit in {% raw %}."""
-    out: list[str] = []
-    block: list[str] = []
-    fence = ""
-    for line in body.split("\n"):
-        stripped = line.strip()
-        if not fence:
-            opening = re.match(r"(`{3,}|~{3,})", stripped)
-            if opening:
-                fence, block = opening.group(1), [line]
-            else:
-                out.append(line)
-            continue
-        block.append(line)
-        if stripped.startswith(fence) and stripped.strip(fence[0]) == "":
-            chunk = "\n".join(block)
-            if "{{" in chunk or "{%" in chunk:
-                chunk = "{% raw %}\n" + chunk + "\n{% endraw %}"
-            out.append(chunk)
-            fence, block = "", []
-    out.extend(block)
-    return "\n".join(out)
+def check_liquid_outside_code(body: str, name: str) -> None:
+    """dev.to runs Liquid over the body. It escapes code blocks and inline code itself
+    (adding our own {% raw %} would nest and break), but not ordinary text."""
+    prose = re.sub(r"(`{3,}|~{3,})[\s\S]*?\1|``.+?``|`[^`\n]+`", "", body)
+    if "{{" in prose or "{%" in prose:
+        raise ValueError(f"{name}: '{{{{' or '{{%' outside a code block would break on dev.to; put it in backticks")
 
 
 def convert_body(body: str, canonical: str, in_series: bool) -> str:
@@ -107,7 +90,6 @@ def convert_body(body: str, canonical: str, in_series: bool) -> str:
     body = re.sub(r"^[ \t]+(\*[^*\n]+\*)[ \t]*$", r"\1", body, flags=re.M)
     body = re.sub(r"\]\((/[^)\s]*)", lambda m: "](" + absolute(m.group(1)), body)
     body = re.sub(r'\b(src|href)="(/[^"]*)"', lambda m: f'{m.group(1)}="{absolute(m.group(2))}"', body)
-    body = wrap_liquid_code_blocks(body)
     body = re.sub(r"\n{3,}", "\n\n", body).strip()
     if body.startswith("---"):
         body = "\u200b\n\n" + body  # a leading --- would be read as dev.to front matter
@@ -151,9 +133,11 @@ def build_article(path: Path, published: bool, ai_default: str) -> dict | None:
     ai_level = meta.get("ai_disclosure", ai_default)
     if ai_level not in AI_LEVELS:
         raise ValueError(f"{path.name}: ai_disclosure must be one of {sorted(AI_LEVELS)}")
+    body_markdown = convert_body(body, canonical, in_series)
+    check_liquid_outside_code(body_markdown, path.name)
     article = {
         "title": str(meta["title"])[:128],
-        "body_markdown": convert_body(body, canonical, in_series),
+        "body_markdown": body_markdown,
         "published": published,
         "canonical_url": canonical,
         "description": meta.get("description", ""),
