@@ -1,5 +1,6 @@
 ---
 title: "Unlocking the Power of Structured Outputs in OpenAI and Azure OpenAI"
+seo_title: "Structured Outputs in OpenAI and Azure OpenAI"
 date: 2024-11-25 00:00:00 +0000
 categories: [AI, Azure, OpenAI, Development]
 tags: [AI, Azure, OpenAI, Development, Structured Outputs, JSON, Constrained Decoding, Data Summarization, Chatbots, Web Scraping, Security, Pydantic, Zod, Tutorial]
@@ -59,7 +60,7 @@ Achieving 100% reliable structured outputs in OpenAI is a remarkable feat, consi
 
 The real breakthrough came with the introduction of **constrained decoding**. without contrained decoding, the model is free to choose any token (like a `{` or a `,`) at any time, which can lead to invalid outputs—especially when adhering to strict formats like JSON. With constrained decoding, OpenAI tackled this by dynamically restricting the model to generate only tokens that are valid according to the defined schema at each step.
 
-![Comparison Graph](../assets/Structured_Outputs/image.png)
+![Comparison Graph](/assets/Structured_Outputs/image.png)
 
 *Image source: [openai.](https://openai.com/index/introducing-structured-outputs-in-the-api/)*
 
@@ -67,7 +68,7 @@ The real breakthrough came with the introduction of **constrained decoding**. wi
 
 To ensure every token matches the required schema, OpenAI converts the JSON Schema into a  [**context-free grammar**](https://en.wikipedia.org/wiki/Context-free_grammar), which essentially defines a set of rules that govern valid outputs. The model uses this grammar to guide its generation process, ensuring that only tokens valid at any given step are considered. For example, after generating an opening curly brace `{`, it restricts the model from producing another `{` until it's logically valid based on the schema. This ensures that the generated output adheres exactly to the structure specified.
 
-![How Context Free Grammar works](../assets/Structured_Outputs/image-1.png)
+![How Context Free Grammar works](/assets/Structured_Outputs/image-1.png)
 *Illustration of Context free grammar matching*
 
 This process incurs a slight latency when handling new schemas, as the grammar needs to be precomputed. However, once processed, the system uses cached data to minimize any performance impact during actual generation. The ability to reliably generate structured outputs without manual validation is a significant improvement in model deployment, particularly in applications that require strict formatting like APIs, data pipelines, or enterprise systems.
@@ -86,10 +87,10 @@ Before structured outputs, developers faced significant challenges integrating A
 
 Unpredictable formatting meant that developers had to account for a range of edge cases, such as missing fields, inconsistent syntax, or extra data that didn’t belong. This made it difficult to scale AI applications in environments that demanded reliable and structured information, which are most of the enterprise environments. For enterprise applications, this lack of consistency was a dealbreaker in many situations, requiring manual validation or extensive logic to clean and transform data into the desired format.
 
-![alt text](../assets/Structured_Outputs/image-3.png)
+![alt text](/assets/Structured_Outputs/image-3.png)
 *Before structured output* - The output may not strictly follow the schema, the prompt can be made in a way that the output structure might differ.
 
-![alt text](../assets/Structured_Outputs/image-2.png)
+![alt text](/assets/Structured_Outputs/image-2.png)
 *After structured output* - The ouput strictly follows the schema even when the prompt says otherwise.
 
 #### **Real-World Impact**

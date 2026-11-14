@@ -1,5 +1,6 @@
 ---
 title: "Enhancing LLMs with Custom Capabilities: A Guide to Langchain and Text-to-Speech"
+seo_title: "Adding Text-to-Speech to an LLM with Langchain"
 date: 2024-02-06 00:00:00 +0000
 categories: [AI, Development, Langchain]
 tags: [AI, Langchain, Custom Capabilities, Text-to-Speech, Python, Tutorial]

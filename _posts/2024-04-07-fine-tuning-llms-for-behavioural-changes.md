@@ -16,7 +16,7 @@ Fine-Tuning is one of the most popular techniques to tailor LLMs for specific us
 
 The below diagram explains how finetuning is done
 
-![Fine-Tuning](../assets/FineTuning/Fine%20tuning.png)
+![Fine-Tuning](/assets/FineTuning/fine-tuning.png)
 
 ## Fine-Tuning Demonstration
 

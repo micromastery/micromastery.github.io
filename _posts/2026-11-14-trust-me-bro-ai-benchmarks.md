@@ -3,7 +3,7 @@ title: "\"Trust Me Bro\" Benchmarks — How AI Labs Grade Their Own Homework"
 date: 2026-11-14 00:00:00 +0530
 categories: [AI, LLM]
 tags: [AI, LLM, benchmarks, evals, SWE-bench, LMArena, contamination, opinion]
-description: "Every new AI model claims to be the best. Here's what those test scores really measure, the common ways they get pumped up, and how to tell when a claim holds up, explained in plain English."
+description: "Every new AI model claims to be the best. What benchmark scores really measure, how they get pumped up, and how to tell when a claim holds up."
 image: /assets/BannerImages/2026-11-14-trust-me-bro-ai-benchmarks.png
 ---
 
@@ -224,7 +224,7 @@ None of this was hidden; it was all in the footnotes. But it means two bars side
 
 ## Problem 3: The Model Has Already Seen the Test
 
-![A robot taking a benchmark exam with "the internet" as an answer key under its desk](/assets/TrustMeBroBenchmarks/contamination.png)
+![A robot taking a benchmark exam with "the internet" as an answer key under its desk](/assets/TrustMeBroBenchmarks/contamination.webp)
 _Most public benchmarks are on the internet, and so is most of the training data._
 
 AI models learn from huge amounts of text collected from the internet. Benchmarks are also published on the internet, often with their answers. So there's a real chance that a model saw the questions, and sometimes the answers, while it was being trained. This is called **contamination**.
@@ -257,7 +257,7 @@ Some benchmarks now include a special "do not train on this" marker, called a **
 
 ## Problem 4: Voting Leaderboards Reward Looks
 
-![Two robots on a stage; the audience votes for the flashy, emoji-filled wrong answer](/assets/TrustMeBroBenchmarks/arena-style-bias.png)
+![Two robots on a stage; the audience votes for the flashy, emoji-filled wrong answer](/assets/TrustMeBroBenchmarks/arena-style-bias.webp)
 _When people vote, nicely formatted answers tend to win, even when they're less accurate._
 
 [LMArena](https://arxiv.org/abs/2403.04132) (previously called Chatbot Arena) works differently from the tests above. A person types a question and sees answers from two anonymous models side by side, then votes for the better one. All these votes are combined into a ranking.

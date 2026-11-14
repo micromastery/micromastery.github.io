@@ -1,12 +1,13 @@
 ---
 layout: page
 title: Privacy Policy
+description: "The privacy policy for Sankar's Blog: what information is collected when you visit and how it is used."
 permalink: /privacy-policy/
 ads: false
 ---
 
 Privacy Policy of Sankar's Blog
-===============================
+-------------------------------
 
 Sankar's Blog operates the https://blog.mavsankar.com website, which provides the SERVICE.
 

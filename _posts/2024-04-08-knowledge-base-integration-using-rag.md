@@ -1,5 +1,6 @@
 ---
 title: "Knowledge Base Embedding using Retrieval Augmented Generation (RAG)"
+seo_title: "Build a Knowledge Base with RAG"
 date: 2024-04-08 00:00:00 +0000
 categories: [AI, Development, LLM]
 tags: [AI, LLM, RAG, Tutorial]
@@ -16,7 +17,7 @@ In knowledge base embedding, when the user asks a question, we search for the re
 > Not sure whether RAG or fine-tuning is right for your use case? See [Tailoring Language Models for Specific Tasks](/posts/tailoring-language-models-for-specific-tasks/) for a side-by-side comparison, or learn the alternative approach in [Fine-Tuning LLMs for Behavioral Changes](/posts/fine-tuning-llms-for-behavioural-changes/).
 {: .prompt-tip }
 
-![rag](../assets/RAG/Rag.png)
+![rag](/assets/RAG/Rag.png)
 
 
 ## How to do RAG?

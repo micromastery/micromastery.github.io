@@ -23,13 +23,13 @@ By leveraging the capabilities of these advanced language models, you can boost 
 
 This method allows you to mold the LLM’s responses to fit a certain style or behaviour, making it possible for the model to emulate specific communication patterns. This can be particularly useful for personalizing interactions or creating a unique brand voice. For example, you can fine tune the LLM to respond to your chats in your own style.
 
-![Fine-Tuning](../assets/FineTuning/Fine%20tuning.png)
+![Fine-Tuning](/assets/FineTuning/fine-tuning.png)
 
 ### Knowledge Base Integration
 
 This approach involves equipping the LLM with a wealth of domain-specific information, enabling it to provide answers that are not only relevant but also rich in content. This is especially beneficial for fields that require a high degree of expertise. However, the amout of knowledge that can eb augmented to a prompt depends on the max tokens the LLM can accept.
 
-![Knowledge Base Integration Diagram](../assets/RAG/Rag.png)
+![Knowledge Base Integration Diagram](/assets/RAG/Rag.png)
 
 ## Implementing Custom Solutions
 

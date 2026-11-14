@@ -1,5 +1,6 @@
 ---
 title: "Meet Your Digital Dream Team: Revolutionizing the Tech World with AI"
+seo_title: "Build an AI Content Team with CrewAI"
 date: 2024-01-30 00:00:00 +0000
 categories: [AI, Innovation, Automation]
 tags: [AI, CrewAI, Content Creation, AI Tools, Tutorial, Python]

@@ -47,6 +47,13 @@ avatar: /assets/img/favicons/android-chrome-512x512.png
 # Default image for link previews on pages without their own `image`
 social_preview_image: /assets/img/favicons/android-chrome-512x512.png
 
+# Author and publisher for structured data (jekyll-seo-tag): Google uses these for articles
+author:
+  name: Sankar
+  url: https://www.mavsankar.com
+  twitter: mavsankar
+logo: /assets/img/favicons/android-chrome-512x512.png
+
 # Comments System: Utterances
 comments:
   active: utterances
@@ -110,6 +117,10 @@ defaults:
       path: assets/js/dist
     values:
       swcache: true
+  - scope:
+      path: google55a3c4d1556359c9.html
+    values:
+      sitemap: false
 
 sass:
   style: compressed

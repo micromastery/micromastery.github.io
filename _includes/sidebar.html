@@ -11,9 +11,11 @@
       {%- endif -%}
     </a>
 
-    <h1 class="site-title">
+    {%- comment -%} Only the home page uses the site name as its main heading; elsewhere the page title is the h1. {%- endcomment -%}
+    {% if page.layout == 'home' %}{% assign _title_tag = 'h1' %}{% else %}{% assign _title_tag = 'div' %}{% endif %}
+    <{{ _title_tag }} class="site-title">
       <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
-    </h1>
+    </{{ _title_tag }}>
     <p class="site-subtitle fst-italic mb-0">{{ site.tagline }}</p>
   </header>
   <!-- .profile-wrapper -->

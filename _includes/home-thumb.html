@@ -12,7 +12,7 @@
 {%- endunless -%}
 {%- if _src -%}
   {%- assign _alt = include.post.image.alt | default: include.post.title | strip_html | escape -%}
-  {%- assign _stem = _src | split: '/' | last | split: '.' | first -%}
+  {%- assign _stem = _src | split: '/' | last | split: '.' | first | remove: '-1280' -%}
   {%- assign _thumb_small = '/assets/BannerImages/thumbs/' | append: _stem | append: '-480.webp' -%}
   {%- assign _thumb_large = '/assets/BannerImages/thumbs/' | append: _stem | append: '-960.webp' -%}
   {%- assign _has_thumb = site.static_files | where: 'path', _thumb_small | first -%}

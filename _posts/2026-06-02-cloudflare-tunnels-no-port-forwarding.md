@@ -46,7 +46,7 @@ Go to [Cloudflare Zero Trust Dashboard](https://one.dash.cloudflare.com/) → Ne
 Give it a name (e.g., `homeserver`), and Cloudflare generates a **tunnel token**. This token is what your server uses to authenticate.
 
 <p align="center">
-  <img src="../assets/CloudflareTunnel/create_a_tunnel.png" alt="Cloudflare dashboard showing tunnel creation and token generation">
+  <img src="/assets/CloudflareTunnel/create_a_tunnel.png" alt="Cloudflare dashboard showing tunnel creation and token generation">
   <br>
   <em>Creating a tunnel in Cloudflare Zero Trust — the generated token is all your server needs. (In the screenshot, the token is on the right side of the docker command)</em>
 </p>
@@ -89,7 +89,7 @@ Back in the Cloudflare dashboard, add routes for each service. Each route maps a
 Or you can point a wildcard subdomain to a reverse proxy (like Nginx) that handles routing based on the hostname. This is what I do — all traffic goes to `cloudflared`, which forwards to Nginx, and Nginx routes to the right container. More on that in a later post.
 
 <p align="center">
-  <img src="../assets/CloudflareTunnel/public_hostnames.png" alt="Cloudflare dashboard showing public hostname configuration">
+  <img src="/assets/CloudflareTunnel/public_hostnames.png" alt="Cloudflare dashboard showing public hostname configuration">
   <br>
   <em>Each subdomain routes to the reverse proxy — Nginx handles the rest.</em>
 </p>
@@ -131,13 +131,13 @@ For services that don't have their own authentication (like my homepage dashboar
 Now even if someone guesses your subdomain, they hit a Cloudflare login screen before reaching anything.
 
 <p align="center">
-  <img src="../assets/CloudflareTunnel/access_policies.png" alt="Cloudflare Access policy configuration">
+  <img src="/assets/CloudflareTunnel/access_policies.png" alt="Cloudflare Access policy configuration">
   <br>
   <em>Cloudflare Access adds a login gate — one-time PIN to your email before anything loads.</em>
 </p>
 
 <p align="center">
-  <img src="../assets/CloudflareTunnel/assign_policy.png" alt="Cloudflare Access policy assignment to an application">
+  <img src="/assets/CloudflareTunnel/assign_policy.png" alt="Cloudflare Access policy assignment to an application">
   <br>
   <em>Assigning a Cloudflare Access policy to an application — ensures only authorized users can access the service.</em>
 </p>

@@ -17,7 +17,7 @@ A few months ago, I was cleaning my room and found my old college laptop — a L
 The thing is, it has no screen. The display cracked after a fall, and when I took it to a repair shop, the guy managed to break it completely and said "replacement not found." So it sat in a drawer for years.
 
 <p align="center">
-  <img src="../assets/FromBrokenLaptopToHomeServer/screenless_laptop.jpg" alt="The screen is broken, but the internals are fine." width="400">
+  <img src="/assets/FromBrokenLaptopToHomeServer/screenless_laptop.jpg" alt="The screen is broken, but the internals are fine." width="400">
   <br>
   <em>The patient — a 2019 Lenovo Flex 5 with a shattered screen but perfectly good internals.</em>
 </p>

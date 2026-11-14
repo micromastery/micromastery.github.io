@@ -1,5 +1,14 @@
 <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | absolute_url }}">
 
+{% if page.noindex %}
+  <meta name="robots" content="noindex, follow">
+{% endif %}
+
+{% if page.layout == 'post' and page.image %}
+  <!-- The theme lazy-loads the banner; preloading it speeds up the page's largest paint -->
+  <link rel="preload" as="image" href="{{ page.image.path | default: page.image | relative_url }}" fetchpriority="high">
+{% endif %}
+
  {% if site.google_adsense and site.google_adsense.client %}
   <!-- Google AdSense (Auto Ads - controlled via Google AdSense dashboard) -->
   <script

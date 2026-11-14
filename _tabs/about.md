@@ -2,6 +2,7 @@
 layout: page
 icon: fas fa-info-circle
 order: 4
+description: "About Sankar, a software engineer at Microsoft who writes about AI, LLMs, self-hosting and software engineering."
 # The sidebar's About link goes here instead of this page (see _includes/sidebar.html)
 external_url: https://www.mavsankar.com
 ---
